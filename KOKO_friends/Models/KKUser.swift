@@ -9,6 +9,6 @@ import Foundation
 
 // curl https://dimanyen.github.io/man.json
 struct KKUser: Codable {
-	let name: String
+	var name: String
 	let kokoid: String
 }

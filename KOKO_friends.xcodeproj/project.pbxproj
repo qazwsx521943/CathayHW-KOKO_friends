@@ -14,7 +14,7 @@
 		E772B4522B58CF1D000BF51C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E772B4512B58CF1D000BF51C /* Assets.xcassets */; };
 		E772B4552B58CF1D000BF51C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E772B4532B58CF1D000BF51C /* LaunchScreen.storyboard */; };
 		E772B4602B58D34D000BF51C /* KokoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B45F2B58D34D000BF51C /* KokoService.swift */; };
-		E772B4662B58D4A7000BF51C /* Bundle+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4652B58D4A7000BF51C /* Bundle+Ext.swift */; };
+		E772B4662B58D4A7000BF51C /* Bundle+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4652B58D4A7000BF51C /* Bundle+EXT.swift */; };
 		E772B46A2B58D9A8000BF51C /* KKFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4692B58D9A8000BF51C /* KKFriend.swift */; };
 		E772B46C2B58DAED000BF51C /* KKUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B46B2B58DAED000BF51C /* KKUser.swift */; };
 		E772B46F2B58DC22000BF51C /* KKResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B46E2B58DC22000BF51C /* KKResponse.swift */; };
@@ -25,6 +25,9 @@
 		E772B4862B58E982000BF51C /* man.json in Resources */ = {isa = PBXBuildFile; fileRef = E772B4852B58E982000BF51C /* man.json */; };
 		E772B4892B58E9C7000BF51C /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4882B58E9C7000BF51C /* FileLoader.swift */; };
 		E772B48B2B58EBDB000BF51C /* friend1.json in Resources */ = {isa = PBXBuildFile; fileRef = E772B48A2B58EBDB000BF51C /* friend1.json */; };
+		E772B48E2B58F59B000BF51C /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B48D2B58F59B000BF51C /* UserInfoView.swift */; };
+		E772B4902B594512000BF51C /* UIFont+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B48F2B594512000BF51C /* UIFont+EXT.swift */; };
+		E772B4952B594AEF000BF51C /* KKFontStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4942B594AEF000BF51C /* KKFontStyles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +50,7 @@
 		E772B4542B58CF1D000BF51C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E772B4562B58CF1D000BF51C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E772B45F2B58D34D000BF51C /* KokoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KokoService.swift; sourceTree = "<group>"; };
-		E772B4652B58D4A7000BF51C /* Bundle+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Ext.swift"; sourceTree = "<group>"; };
+		E772B4652B58D4A7000BF51C /* Bundle+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+EXT.swift"; sourceTree = "<group>"; };
 		E772B4692B58D9A8000BF51C /* KKFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKFriend.swift; sourceTree = "<group>"; };
 		E772B46B2B58DAED000BF51C /* KKUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKUser.swift; sourceTree = "<group>"; };
 		E772B46E2B58DC22000BF51C /* KKResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKResponse.swift; sourceTree = "<group>"; };
@@ -59,6 +62,9 @@
 		E772B4852B58E982000BF51C /* man.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = man.json; sourceTree = "<group>"; };
 		E772B4882B58E9C7000BF51C /* FileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLoader.swift; sourceTree = "<group>"; };
 		E772B48A2B58EBDB000BF51C /* friend1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = friend1.json; sourceTree = "<group>"; };
+		E772B48D2B58F59B000BF51C /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		E772B48F2B594512000BF51C /* UIFont+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+EXT.swift"; sourceTree = "<group>"; };
+		E772B4942B594AEF000BF51C /* KKFontStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKFontStyles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,7 @@
 		E772B4472B58CF1B000BF51C /* KOKO_friends */ = {
 			isa = PBXGroup;
 			children = (
+				E772B4912B594ACB000BF51C /* Styles */,
 				E772B4872B58E9B2000BF51C /* Helpers */,
 				E772B4822B58E8D8000BF51C /* Mock */,
 				E772B47F2B58E59A000BF51C /* Views */,
@@ -140,7 +147,8 @@
 		E772B4642B58D499000BF51C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E772B4652B58D4A7000BF51C /* Bundle+Ext.swift */,
+				E772B4652B58D4A7000BF51C /* Bundle+EXT.swift */,
+				E772B48F2B594512000BF51C /* UIFont+EXT.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 		E772B47F2B58E59A000BF51C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E772B48C2B58F57A000BF51C /* Components */,
 				E772B4802B58E5C8000BF51C /* KokoFriendListViewModel.swift */,
 			);
 			path = Views;
@@ -184,6 +193,22 @@
 				E772B4882B58E9C7000BF51C /* FileLoader.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E772B48C2B58F57A000BF51C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E772B48D2B58F59B000BF51C /* UserInfoView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E772B4912B594ACB000BF51C /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				E772B4942B594AEF000BF51C /* KKFontStyles.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,10 +321,13 @@
 				E772B4842B58E8EA000BF51C /* MockKokoService.swift in Sources */,
 				E772B46C2B58DAED000BF51C /* KKUser.swift in Sources */,
 				E772B4892B58E9C7000BF51C /* FileLoader.swift in Sources */,
-				E772B4662B58D4A7000BF51C /* Bundle+Ext.swift in Sources */,
+				E772B4662B58D4A7000BF51C /* Bundle+EXT.swift in Sources */,
+				E772B4952B594AEF000BF51C /* KKFontStyles.swift in Sources */,
 				E772B46A2B58D9A8000BF51C /* KKFriend.swift in Sources */,
 				E772B4492B58CF1B000BF51C /* AppDelegate.swift in Sources */,
+				E772B48E2B58F59B000BF51C /* UserInfoView.swift in Sources */,
 				E772B4812B58E5C8000BF51C /* KokoFriendListViewModel.swift in Sources */,
+				E772B4902B594512000BF51C /* UIFont+EXT.swift in Sources */,
 				E772B44B2B58CF1B000BF51C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

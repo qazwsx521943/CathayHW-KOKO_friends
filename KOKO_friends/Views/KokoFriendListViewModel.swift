@@ -15,7 +15,7 @@ class KokoFriendListViewModel {
 
 	private var anyCancellables = Set<AnyCancellable>()
 
-	init(kokoService: KokoServiceProtocol) {
+	init(kokoService: KokoServiceProtocol = KokoService()) {
 		self.kokoService = kokoService
 	}
 
