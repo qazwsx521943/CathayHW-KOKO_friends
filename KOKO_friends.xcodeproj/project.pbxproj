@@ -13,6 +13,12 @@
 		E772B4502B58CF1B000BF51C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E772B44E2B58CF1B000BF51C /* Main.storyboard */; };
 		E772B4522B58CF1D000BF51C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E772B4512B58CF1D000BF51C /* Assets.xcassets */; };
 		E772B4552B58CF1D000BF51C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E772B4532B58CF1D000BF51C /* LaunchScreen.storyboard */; };
+		E772B4602B58D34D000BF51C /* KokoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B45F2B58D34D000BF51C /* KokoService.swift */; };
+		E772B4662B58D4A7000BF51C /* Bundle+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4652B58D4A7000BF51C /* Bundle+Ext.swift */; };
+		E772B46A2B58D9A8000BF51C /* KKFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4692B58D9A8000BF51C /* KKFriend.swift */; };
+		E772B46C2B58DAED000BF51C /* KKUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B46B2B58DAED000BF51C /* KKUser.swift */; };
+		E772B46F2B58DC22000BF51C /* KKResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B46E2B58DC22000BF51C /* KKResponse.swift */; };
+		E772B4712B58E0BC000BF51C /* KKRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4702B58E0BC000BF51C /* KKRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		E772B4512B58CF1D000BF51C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E772B4542B58CF1D000BF51C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E772B4562B58CF1D000BF51C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E772B45F2B58D34D000BF51C /* KokoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KokoService.swift; sourceTree = "<group>"; };
+		E772B4652B58D4A7000BF51C /* Bundle+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Ext.swift"; sourceTree = "<group>"; };
+		E772B4692B58D9A8000BF51C /* KKFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKFriend.swift; sourceTree = "<group>"; };
+		E772B46B2B58DAED000BF51C /* KKUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKUser.swift; sourceTree = "<group>"; };
+		E772B46E2B58DC22000BF51C /* KKResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKResponse.swift; sourceTree = "<group>"; };
+		E772B4702B58E0BC000BF51C /* KKRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,10 @@
 		E772B4472B58CF1B000BF51C /* KOKO_friends */ = {
 			isa = PBXGroup;
 			children = (
+				E772B46D2B58DB73000BF51C /* Managers */,
+				E772B4642B58D499000BF51C /* Extensions */,
+				E772B4612B58D3C5000BF51C /* Models */,
+				E772B45C2B58D2F9000BF51C /* Services */,
 				E772B4482B58CF1B000BF51C /* AppDelegate.swift */,
 				E772B44A2B58CF1B000BF51C /* SceneDelegate.swift */,
 				E772B44C2B58CF1B000BF51C /* ViewController.swift */,
@@ -65,6 +81,40 @@
 				E772B4562B58CF1D000BF51C /* Info.plist */,
 			);
 			path = KOKO_friends;
+			sourceTree = "<group>";
+		};
+		E772B45C2B58D2F9000BF51C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E772B45F2B58D34D000BF51C /* KokoService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E772B4612B58D3C5000BF51C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E772B4692B58D9A8000BF51C /* KKFriend.swift */,
+				E772B46B2B58DAED000BF51C /* KKUser.swift */,
+				E772B46E2B58DC22000BF51C /* KKResponse.swift */,
+				E772B4702B58E0BC000BF51C /* KKRequest.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E772B4642B58D499000BF51C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E772B4652B58D4A7000BF51C /* Bundle+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E772B46D2B58DB73000BF51C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +188,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E772B4712B58E0BC000BF51C /* KKRequest.swift in Sources */,
+				E772B46F2B58DC22000BF51C /* KKResponse.swift in Sources */,
 				E772B44D2B58CF1B000BF51C /* ViewController.swift in Sources */,
+				E772B4602B58D34D000BF51C /* KokoService.swift in Sources */,
+				E772B46C2B58DAED000BF51C /* KKUser.swift in Sources */,
+				E772B4662B58D4A7000BF51C /* Bundle+Ext.swift in Sources */,
+				E772B46A2B58D9A8000BF51C /* KKFriend.swift in Sources */,
 				E772B4492B58CF1B000BF51C /* AppDelegate.swift in Sources */,
 				E772B44B2B58CF1B000BF51C /* SceneDelegate.swift in Sources */,
 			);
