@@ -19,7 +19,23 @@
 		E772B46C2B58DAED000BF51C /* KKUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B46B2B58DAED000BF51C /* KKUser.swift */; };
 		E772B46F2B58DC22000BF51C /* KKResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B46E2B58DC22000BF51C /* KKResponse.swift */; };
 		E772B4712B58E0BC000BF51C /* KKRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4702B58E0BC000BF51C /* KKRequest.swift */; };
+		E772B4792B58E3FE000BF51C /* KokoFriendListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4782B58E3FE000BF51C /* KokoFriendListViewModelTests.swift */; };
+		E772B4812B58E5C8000BF51C /* KokoFriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4802B58E5C8000BF51C /* KokoFriendListViewModel.swift */; };
+		E772B4842B58E8EA000BF51C /* MockKokoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4832B58E8EA000BF51C /* MockKokoService.swift */; };
+		E772B4862B58E982000BF51C /* man.json in Resources */ = {isa = PBXBuildFile; fileRef = E772B4852B58E982000BF51C /* man.json */; };
+		E772B4892B58E9C7000BF51C /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4882B58E9C7000BF51C /* FileLoader.swift */; };
+		E772B48B2B58EBDB000BF51C /* friend1.json in Resources */ = {isa = PBXBuildFile; fileRef = E772B48A2B58EBDB000BF51C /* friend1.json */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E772B47A2B58E3FE000BF51C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E772B43D2B58CF1B000BF51C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E772B4442B58CF1B000BF51C;
+			remoteInfo = KOKO_friends;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E772B4452B58CF1B000BF51C /* KOKO_friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KOKO_friends.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,10 +52,24 @@
 		E772B46B2B58DAED000BF51C /* KKUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKUser.swift; sourceTree = "<group>"; };
 		E772B46E2B58DC22000BF51C /* KKResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKResponse.swift; sourceTree = "<group>"; };
 		E772B4702B58E0BC000BF51C /* KKRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKRequest.swift; sourceTree = "<group>"; };
+		E772B4762B58E3FE000BF51C /* KOKO_friendsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KOKO_friendsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E772B4782B58E3FE000BF51C /* KokoFriendListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KokoFriendListViewModelTests.swift; sourceTree = "<group>"; };
+		E772B4802B58E5C8000BF51C /* KokoFriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KokoFriendListViewModel.swift; sourceTree = "<group>"; };
+		E772B4832B58E8EA000BF51C /* MockKokoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockKokoService.swift; sourceTree = "<group>"; };
+		E772B4852B58E982000BF51C /* man.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = man.json; sourceTree = "<group>"; };
+		E772B4882B58E9C7000BF51C /* FileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLoader.swift; sourceTree = "<group>"; };
+		E772B48A2B58EBDB000BF51C /* friend1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = friend1.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E772B4422B58CF1B000BF51C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E772B4732B58E3FE000BF51C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				E772B4472B58CF1B000BF51C /* KOKO_friends */,
+				E772B4772B58E3FE000BF51C /* KOKO_friendsTests */,
 				E772B4462B58CF1B000BF51C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				E772B4452B58CF1B000BF51C /* KOKO_friends.app */,
+				E772B4762B58E3FE000BF51C /* KOKO_friendsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,6 +100,9 @@
 		E772B4472B58CF1B000BF51C /* KOKO_friends */ = {
 			isa = PBXGroup;
 			children = (
+				E772B4872B58E9B2000BF51C /* Helpers */,
+				E772B4822B58E8D8000BF51C /* Mock */,
+				E772B47F2B58E59A000BF51C /* Views */,
 				E772B46D2B58DB73000BF51C /* Managers */,
 				E772B4642B58D499000BF51C /* Extensions */,
 				E772B4612B58D3C5000BF51C /* Models */,
@@ -117,6 +152,40 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		E772B4772B58E3FE000BF51C /* KOKO_friendsTests */ = {
+			isa = PBXGroup;
+			children = (
+				E772B4782B58E3FE000BF51C /* KokoFriendListViewModelTests.swift */,
+			);
+			path = KOKO_friendsTests;
+			sourceTree = "<group>";
+		};
+		E772B47F2B58E59A000BF51C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E772B4802B58E5C8000BF51C /* KokoFriendListViewModel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E772B4822B58E8D8000BF51C /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				E772B4832B58E8EA000BF51C /* MockKokoService.swift */,
+				E772B4852B58E982000BF51C /* man.json */,
+				E772B48A2B58EBDB000BF51C /* friend1.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		E772B4872B58E9B2000BF51C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E772B4882B58E9C7000BF51C /* FileLoader.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +206,24 @@
 			productReference = E772B4452B58CF1B000BF51C /* KOKO_friends.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E772B4752B58E3FE000BF51C /* KOKO_friendsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E772B47C2B58E3FE000BF51C /* Build configuration list for PBXNativeTarget "KOKO_friendsTests" */;
+			buildPhases = (
+				E772B4722B58E3FE000BF51C /* Sources */,
+				E772B4732B58E3FE000BF51C /* Frameworks */,
+				E772B4742B58E3FE000BF51C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E772B47B2B58E3FE000BF51C /* PBXTargetDependency */,
+			);
+			name = KOKO_friendsTests;
+			productName = KOKO_friendsTests;
+			productReference = E772B4762B58E3FE000BF51C /* KOKO_friendsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -149,6 +236,10 @@
 				TargetAttributes = {
 					E772B4442B58CF1B000BF51C = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					E772B4752B58E3FE000BF51C = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = E772B4442B58CF1B000BF51C;
 					};
 				};
 			};
@@ -166,6 +257,7 @@
 			projectRoot = "";
 			targets = (
 				E772B4442B58CF1B000BF51C /* KOKO_friends */,
+				E772B4752B58E3FE000BF51C /* KOKO_friendsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -175,9 +267,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E772B48B2B58EBDB000BF51C /* friend1.json in Resources */,
+				E772B4862B58E982000BF51C /* man.json in Resources */,
 				E772B4552B58CF1D000BF51C /* LaunchScreen.storyboard in Resources */,
 				E772B4522B58CF1D000BF51C /* Assets.xcassets in Resources */,
 				E772B4502B58CF1B000BF51C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E772B4742B58E3FE000BF51C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,15 +293,34 @@
 				E772B46F2B58DC22000BF51C /* KKResponse.swift in Sources */,
 				E772B44D2B58CF1B000BF51C /* ViewController.swift in Sources */,
 				E772B4602B58D34D000BF51C /* KokoService.swift in Sources */,
+				E772B4842B58E8EA000BF51C /* MockKokoService.swift in Sources */,
 				E772B46C2B58DAED000BF51C /* KKUser.swift in Sources */,
+				E772B4892B58E9C7000BF51C /* FileLoader.swift in Sources */,
 				E772B4662B58D4A7000BF51C /* Bundle+Ext.swift in Sources */,
 				E772B46A2B58D9A8000BF51C /* KKFriend.swift in Sources */,
 				E772B4492B58CF1B000BF51C /* AppDelegate.swift in Sources */,
+				E772B4812B58E5C8000BF51C /* KokoFriendListViewModel.swift in Sources */,
 				E772B44B2B58CF1B000BF51C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E772B4722B58E3FE000BF51C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E772B4792B58E3FE000BF51C /* KokoFriendListViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E772B47B2B58E3FE000BF51C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E772B4442B58CF1B000BF51C /* KOKO_friends */;
+			targetProxy = E772B47A2B58E3FE000BF51C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E772B44E2B58CF1B000BF51C /* Main.storyboard */ = {
@@ -397,6 +517,42 @@
 			};
 			name = Release;
 		};
+		E772B47D2B58E3FE000BF51C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y73ZJF4SCP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ios22-jason.KOKO-friendsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KOKO_friends.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KOKO_friends";
+			};
+			name = Debug;
+		};
+		E772B47E2B58E3FE000BF51C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y73ZJF4SCP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ios22-jason.KOKO-friendsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KOKO_friends.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KOKO_friends";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -414,6 +570,15 @@
 			buildConfigurations = (
 				E772B45A2B58CF1D000BF51C /* Debug */,
 				E772B45B2B58CF1D000BF51C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E772B47C2B58E3FE000BF51C /* Build configuration list for PBXNativeTarget "KOKO_friendsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E772B47D2B58E3FE000BF51C /* Debug */,
+				E772B47E2B58E3FE000BF51C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
