@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E726979C2B5A4F5B006A0034 /* UITableView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E726979B2B5A4F5B006A0034 /* UITableView+EXT.swift */; };
 		E772B4492B58CF1B000BF51C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4482B58CF1B000BF51C /* AppDelegate.swift */; };
 		E772B44B2B58CF1B000BF51C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B44A2B58CF1B000BF51C /* SceneDelegate.swift */; };
 		E772B44D2B58CF1B000BF51C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B44C2B58CF1B000BF51C /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 		E772B48E2B58F59B000BF51C /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B48D2B58F59B000BF51C /* UserInfoView.swift */; };
 		E772B4902B594512000BF51C /* UIFont+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B48F2B594512000BF51C /* UIFont+EXT.swift */; };
 		E772B4952B594AEF000BF51C /* KKFontStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4942B594AEF000BF51C /* KKFontStyles.swift */; };
+		E772B4A12B5A3493000BF51C /* UIView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4A02B5A3493000BF51C /* UIView+EXT.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,7 @@
 		E772B48D2B58F59B000BF51C /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		E772B48F2B594512000BF51C /* UIFont+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+EXT.swift"; sourceTree = "<group>"; };
 		E772B4942B594AEF000BF51C /* KKFontStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKFontStyles.swift; sourceTree = "<group>"; };
+		E772B4A02B5A3493000BF51C /* UIView+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+EXT.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,8 @@
 			children = (
 				E772B4652B58D4A7000BF51C /* Bundle+EXT.swift */,
 				E772B48F2B594512000BF51C /* UIFont+EXT.swift */,
+				E772B4A02B5A3493000BF51C /* UIView+EXT.swift */,
+				E726979B2B5A4F5B006A0034 /* UITableView+EXT.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -318,9 +323,11 @@
 				E772B46F2B58DC22000BF51C /* KKResponse.swift in Sources */,
 				E772B44D2B58CF1B000BF51C /* ViewController.swift in Sources */,
 				E772B4602B58D34D000BF51C /* KokoService.swift in Sources */,
+				E726979C2B5A4F5B006A0034 /* UITableView+EXT.swift in Sources */,
 				E772B4842B58E8EA000BF51C /* MockKokoService.swift in Sources */,
 				E772B46C2B58DAED000BF51C /* KKUser.swift in Sources */,
 				E772B4892B58E9C7000BF51C /* FileLoader.swift in Sources */,
+				E772B4A12B5A3493000BF51C /* UIView+EXT.swift in Sources */,
 				E772B4662B58D4A7000BF51C /* Bundle+EXT.swift in Sources */,
 				E772B4952B594AEF000BF51C /* KKFontStyles.swift in Sources */,
 				E772B46A2B58D9A8000BF51C /* KKFriend.swift in Sources */,
