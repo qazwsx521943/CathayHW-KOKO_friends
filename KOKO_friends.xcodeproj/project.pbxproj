@@ -37,6 +37,9 @@
 		E772B48E2B58F59B000BF51C /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B48D2B58F59B000BF51C /* UserInfoView.swift */; };
 		E772B4902B594512000BF51C /* UIFont+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B48F2B594512000BF51C /* UIFont+EXT.swift */; };
 		E772B4952B594AEF000BF51C /* KKFontStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4942B594AEF000BF51C /* KKFontStyles.swift */; };
+		E772B49B2B5A2283000BF51C /* SelectionTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B49A2B5A2283000BF51C /* SelectionTabView.swift */; };
+		E772B49D2B5A2A45000BF51C /* BadgeLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B49C2B5A2A45000BF51C /* BadgeLabelView.swift */; };
+		E772B49F2B5A3091000BF51C /* BadgeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B49E2B5A3091000BF51C /* BadgeLabel.swift */; };
 		E772B4A12B5A3493000BF51C /* UIView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4A02B5A3493000BF51C /* UIView+EXT.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +86,9 @@
 		E772B48D2B58F59B000BF51C /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		E772B48F2B594512000BF51C /* UIFont+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+EXT.swift"; sourceTree = "<group>"; };
 		E772B4942B594AEF000BF51C /* KKFontStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKFontStyles.swift; sourceTree = "<group>"; };
+		E772B49A2B5A2283000BF51C /* SelectionTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTabView.swift; sourceTree = "<group>"; };
+		E772B49C2B5A2A45000BF51C /* BadgeLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeLabelView.swift; sourceTree = "<group>"; };
+		E772B49E2B5A3091000BF51C /* BadgeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeLabel.swift; sourceTree = "<group>"; };
 		E772B4A02B5A3493000BF51C /* UIView+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+EXT.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -227,6 +233,7 @@
 			children = (
 				E772B4A22B5A3787000BF51C /* Base */,
 				E772B48D2B58F59B000BF51C /* UserInfoView.swift */,
+				E772B49A2B5A2283000BF51C /* SelectionTabView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -242,6 +249,8 @@
 		E772B4A22B5A3787000BF51C /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				E772B49C2B5A2A45000BF51C /* BadgeLabelView.swift */,
+				E772B49E2B5A3091000BF51C /* BadgeLabel.swift */,
 				E734BEE52B5B65500038F9A7 /* KKTabBarController.swift */,
 				E734BEF42B5B6F7B0038F9A7 /* KKFriendNavigationController.swift */,
 			);
@@ -355,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E772B49D2B5A2A45000BF51C /* BadgeLabelView.swift in Sources */,
 				E772B4712B58E0BC000BF51C /* KKRequest.swift in Sources */,
 				E772B46F2B58DC22000BF51C /* KKResponse.swift in Sources */,
 				E772B44D2B58CF1B000BF51C /* ViewController.swift in Sources */,
@@ -367,6 +377,7 @@
 				E772B4A12B5A3493000BF51C /* UIView+EXT.swift in Sources */,
 				E734BEE62B5B65500038F9A7 /* KKTabBarController.swift in Sources */,
 				E772B4662B58D4A7000BF51C /* Bundle+EXT.swift in Sources */,
+				E772B49B2B5A2283000BF51C /* SelectionTabView.swift in Sources */,
 				E772B4952B594AEF000BF51C /* KKFontStyles.swift in Sources */,
 				E734BEF52B5B6F7B0038F9A7 /* KKFriendNavigationController.swift in Sources */,
 				E772B46A2B58D9A8000BF51C /* KKFriend.swift in Sources */,
@@ -376,6 +387,7 @@
 				E772B4902B594512000BF51C /* UIFont+EXT.swift in Sources */,
 				E772B44B2B58CF1B000BF51C /* SceneDelegate.swift in Sources */,
 				E734BEF22B5B6D350038F9A7 /* UIColor+EXT.swift in Sources */,
+				E772B49F2B5A3091000BF51C /* BadgeLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
