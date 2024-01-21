@@ -8,7 +8,7 @@
 import Foundation
 
 // curl https://dimanyen.github.io/friend1.json
-struct KKFriend: Codable {
+struct KKFriend: Codable, Equatable {
 	let name: String
 	let status: FriendStatus
 	let isTop: String

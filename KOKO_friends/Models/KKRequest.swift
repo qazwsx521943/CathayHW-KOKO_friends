@@ -31,3 +31,27 @@ enum KKRequest: KKRequestProtocol {
 		}
 	}
 }
+
+enum APIRequest: Int, CaseIterable {
+	case noFriends = 0
+	case noPendingInvitations
+	case withPendingInvitations
+
+	static let situations = Self.allCases.map { $0.title }
+
+	var endPoints: [Int] {
+		switch self {
+		case .noFriends: return [4]
+		case .noPendingInvitations: return [1, 2]
+		case .withPendingInvitations: return [3]
+		}
+	}
+
+	var title: String {
+		switch self {
+		case .noFriends: "無好友"
+		case .noPendingInvitations: "無待接受邀請"
+		case .withPendingInvitations: "有待接受邀請"
+		}
+	}
+}
