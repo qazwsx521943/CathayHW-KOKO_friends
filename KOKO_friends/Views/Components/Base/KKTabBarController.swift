@@ -23,6 +23,7 @@ extension KKTabBarController {
 	private enum Tab: CaseIterable {
 		case products
 		case friends
+		case home
 		case manage
 		case setting
 
@@ -33,6 +34,8 @@ extension KKTabBarController {
 				controller = UIStoryboard.products.instantiateInitialViewController()!
 			case.friends:
 				controller = UIStoryboard.friends.instantiateInitialViewController()!
+			case .home:
+				controller = UIStoryboard.home.instantiateInitialViewController()!
 			case.manage:
 				controller = UIStoryboard.manage.instantiateInitialViewController()!
 			case.setting:
@@ -50,6 +53,8 @@ extension KKTabBarController {
 				return UIImage(resource: .icTabbarProductsOff)
 			case .friends:
 				return UIImage(resource: .icTabbarFriendsOn)
+			case .home:
+				return UIImage(resource: .icTabbarHomeOff)
 			case .manage:
 				return UIImage(resource: .icTabbarManageOff)
 			case .setting:
