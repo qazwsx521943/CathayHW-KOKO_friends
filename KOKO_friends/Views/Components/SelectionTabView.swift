@@ -12,6 +12,8 @@ protocol SelectionTabViewDelegate: AnyObject {
 	func selectionTabViewTabsCount(_ selectionTabView: SelectionTabView) -> Int
 
 	func selectionTabView(_ selectionTabView: SelectionTabView, textForTabAt: IndexPath) -> String
+
+	func selectionTabView(_ selectionTabView: SelectionTabView, badgeValueForTabAt: IndexPath) -> Int
 }
 
 class SelectionTabView: UIView {
@@ -20,8 +22,8 @@ class SelectionTabView: UIView {
 		view.translatesAutoresizingMaskIntoConstraints = false
 		view.axis = .horizontal
 		view.alignment = .center
-		view.distribution = .fillEqually
-		view.spacing = 10
+		view.distribution = .fill
+		view.spacing = 0
 		return view
 	}()
 
@@ -29,8 +31,8 @@ class SelectionTabView: UIView {
 		let view = UIView()
 		view.translatesAutoresizingMaskIntoConstraints = false
 		view.clipsToBounds = true
-		view.layer.cornerRadius = 1
-		view.backgroundColor = .systemPink
+		view.layer.cornerRadius = 2
+		view.backgroundColor = .accent
 		return view
 	}()
 
@@ -69,7 +71,10 @@ class SelectionTabView: UIView {
 
 			if let text = delegate?.selectionTabView(self, textForTabAt: IndexPath(row: i, section: 0)) {
 				tabLabel.setTitle(text)
-				tabLabel.updateBadgeValue(2)
+			}
+
+			if let badgeValue = delegate?.selectionTabView(self, badgeValueForTabAt: IndexPath(row: i, section: 0)) {
+				tabLabel.updateBadgeValue(badgeValue)
 			}
 			tabLabel.widthAnchor.constraint(equalToConstant: 50).isActive = true
 			tabLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -94,6 +99,17 @@ class SelectionTabView: UIView {
 			indicatorView.bottomAnchor.constraint(equalTo: stackView.bottomAnchor)
 		])
 		indicatorViewConstraint.isActive = true
+	}
+
+	public func updateBadgeValue() {
+		for (index, tab) in stackView.subviews.enumerated() {
+			if
+				let badgeValue = delegate?.selectionTabView(self, badgeValueForTabAt: IndexPath(row: index, section: 0)),
+				let tab = tab as? BadgeLabelView
+			{
+				tab.updateBadgeValue(badgeValue)
+			}
+		}
 	}
 }
 
@@ -120,6 +136,10 @@ struct SwiftUISelectionTabView: UIViewRepresentable {
 	}
 
 	class Coordinator: SelectionTabViewDelegate {
+		func selectionTabView(_ selectionTabView: SelectionTabView, badgeValueForTabAt: IndexPath) -> Int {
+			2
+		}
+		
 		func selectionTabViewTabsCount(_ selectionTabView: SelectionTabView) -> Int {
 			3
 		}
