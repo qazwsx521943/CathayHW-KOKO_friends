@@ -33,7 +33,14 @@ class KKSearchableFriendListViewController: UIViewController {
 		tableView.delegate = self
 		tableView.dataSource = self
 		tableView.kk_registerCellWithNib(identifier: FriendListTableViewCell.identifier, bundle: nil)
+		tableView.addSubview(refreshControl)
 		return tableView
+	}()
+
+	lazy var refreshControl: UIRefreshControl = {
+		let refreshControl = UIRefreshControl()
+		refreshControl.addTarget(self, action: #selector(loadData), for: .valueChanged)
+		return refreshControl
 	}()
 
 	private var viewModel: KokoFriendListViewModel
@@ -53,6 +60,13 @@ class KKSearchableFriendListViewController: UIViewController {
 		setupViewController()
 		setupBindings()
     }
+
+	@objc fileprivate func loadData() {
+		refreshControl.beginRefreshing()
+		viewModel.friendResponseType.endPoints.forEach { type in
+			viewModel.fetchFriends(type: type)
+		}
+	}
 
 	private func setupViewController() {
 		view.addSubview(searchBar)
@@ -79,6 +93,7 @@ class KKSearchableFriendListViewController: UIViewController {
 		viewModel.$friendList.receive(on: RunLoop.main)
 			.sink { [weak self] kkfriends in
 				self?.tableView.reloadData()
+				self?.refreshControl.endRefreshing()
 			}
 			.store(in: &bindings)
 
