@@ -22,6 +22,7 @@ class BadgeLabelView: UIView {
 	private let badgeLabel: BadgeLabel = {
 		let label = BadgeLabel()
 		label.translatesAutoresizingMaskIntoConstraints = false
+		label.backgroundColor = .accent
 		return label
 	}()
 
