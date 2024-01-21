@@ -24,9 +24,10 @@
 		E75790D42B5CF98600470069 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E75790D32B5CF98600470069 /* Home.storyboard */; };
 		E75790DF2B5D101E00470069 /* FriendListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75790DD2B5D101E00470069 /* FriendListTableViewCell.swift */; };
 		E75790E02B5D101E00470069 /* FriendListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E75790DE2B5D101E00470069 /* FriendListTableViewCell.xib */; };
+		E75790E62B5D76E200470069 /* KKSearchableFriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75790E52B5D76E200470069 /* KKSearchableFriendListViewController.swift */; };
 		E772B4492B58CF1B000BF51C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4482B58CF1B000BF51C /* AppDelegate.swift */; };
 		E772B44B2B58CF1B000BF51C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B44A2B58CF1B000BF51C /* SceneDelegate.swift */; };
-		E772B44D2B58CF1B000BF51C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B44C2B58CF1B000BF51C /* ViewController.swift */; };
+		E772B44D2B58CF1B000BF51C /* KokoFriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B44C2B58CF1B000BF51C /* KokoFriendListViewController.swift */; };
 		E772B4502B58CF1B000BF51C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E772B44E2B58CF1B000BF51C /* Main.storyboard */; };
 		E772B4522B58CF1D000BF51C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E772B4512B58CF1D000BF51C /* Assets.xcassets */; };
 		E772B4552B58CF1D000BF51C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E772B4532B58CF1D000BF51C /* LaunchScreen.storyboard */; };
@@ -79,10 +80,11 @@
 		E75790D32B5CF98600470069 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		E75790DD2B5D101E00470069 /* FriendListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListTableViewCell.swift; sourceTree = "<group>"; };
 		E75790DE2B5D101E00470069 /* FriendListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendListTableViewCell.xib; sourceTree = "<group>"; };
+		E75790E52B5D76E200470069 /* KKSearchableFriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKSearchableFriendListViewController.swift; sourceTree = "<group>"; };
 		E772B4452B58CF1B000BF51C /* KOKO_friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KOKO_friends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E772B4482B58CF1B000BF51C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E772B44A2B58CF1B000BF51C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E772B44C2B58CF1B000BF51C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E772B44C2B58CF1B000BF51C /* KokoFriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KokoFriendListViewController.swift; sourceTree = "<group>"; };
 		E772B44F2B58CF1B000BF51C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E772B4512B58CF1D000BF51C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E772B4542B58CF1D000BF51C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -169,7 +171,6 @@
 				E772B45C2B58D2F9000BF51C /* Services */,
 				E772B4482B58CF1B000BF51C /* AppDelegate.swift */,
 				E772B44A2B58CF1B000BF51C /* SceneDelegate.swift */,
-				E772B44C2B58CF1B000BF51C /* ViewController.swift */,
 				E772B4512B58CF1D000BF51C /* Assets.xcassets */,
 				E772B4532B58CF1D000BF51C /* LaunchScreen.storyboard */,
 				E772B4562B58CF1D000BF51C /* Info.plist */,
@@ -230,6 +231,7 @@
 			children = (
 				E772B48C2B58F57A000BF51C /* Components */,
 				E772B4802B58E5C8000BF51C /* KokoFriendListViewModel.swift */,
+				E772B44C2B58CF1B000BF51C /* KokoFriendListViewController.swift */,
 				E772B44E2B58CF1B000BF51C /* Main.storyboard */,
 				E734BEE72B5B687D0038F9A7 /* Products.storyboard */,
 				E734BEEB2B5B68E00038F9A7 /* Manage.storyboard */,
@@ -266,6 +268,7 @@
 				E772B48D2B58F59B000BF51C /* UserInfoView.swift */,
 				E734BEF62B5C26890038F9A7 /* DefaultEmptyFriendView.xib */,
 				E75790D12B5C55C700470069 /* DefaultEmptyFriendView.swift */,
+				E75790E52B5D76E200470069 /* KKSearchableFriendListViewController.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -404,9 +407,10 @@
 				E772B49D2B5A2A45000BF51C /* BadgeLabelView.swift in Sources */,
 				E772B4712B58E0BC000BF51C /* KKRequest.swift in Sources */,
 				E772B46F2B58DC22000BF51C /* KKResponse.swift in Sources */,
-				E772B44D2B58CF1B000BF51C /* ViewController.swift in Sources */,
+				E772B44D2B58CF1B000BF51C /* KokoFriendListViewController.swift in Sources */,
 				E734BEF02B5B690E0038F9A7 /* UIStoryboard+EXT.swift in Sources */,
 				E772B4602B58D34D000BF51C /* KokoService.swift in Sources */,
+				E75790E62B5D76E200470069 /* KKSearchableFriendListViewController.swift in Sources */,
 				E75790D22B5C55C700470069 /* DefaultEmptyFriendView.swift in Sources */,
 				E726979C2B5A4F5B006A0034 /* UITableView+EXT.swift in Sources */,
 				E772B4842B58E8EA000BF51C /* MockKokoService.swift in Sources */,
