@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E72697972B5A4B01006A0034 /* FriendRequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72697962B5A4B01006A0034 /* FriendRequestTableViewCell.xib */; };
+		E726979A2B5A4D69006A0034 /* FriendRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72697992B5A4D69006A0034 /* FriendRequestTableViewCell.swift */; };
 		E726979C2B5A4F5B006A0034 /* UITableView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E726979B2B5A4F5B006A0034 /* UITableView+EXT.swift */; };
 		E734BEE62B5B65500038F9A7 /* KKTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734BEE52B5B65500038F9A7 /* KKTabBarController.swift */; };
 		E734BEE82B5B687D0038F9A7 /* Products.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E734BEE72B5B687D0038F9A7 /* Products.storyboard */; };
@@ -59,6 +61,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E72697962B5A4B01006A0034 /* FriendRequestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendRequestTableViewCell.xib; sourceTree = "<group>"; };
+		E72697992B5A4D69006A0034 /* FriendRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestTableViewCell.swift; sourceTree = "<group>"; };
+		E726979B2B5A4F5B006A0034 /* UITableView+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EXT.swift"; sourceTree = "<group>"; };
 		E734BEE52B5B65500038F9A7 /* KKTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKTabBarController.swift; sourceTree = "<group>"; };
 		E734BEE72B5B687D0038F9A7 /* Products.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Products.storyboard; sourceTree = "<group>"; };
 		E734BEE92B5B68AB0038F9A7 /* Friends.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
@@ -123,6 +128,8 @@
 		E72697982B5A4D3E006A0034 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				E72697992B5A4D69006A0034 /* FriendRequestTableViewCell.swift */,
+				E72697962B5A4B01006A0034 /* FriendRequestTableViewCell.xib */,
 				E75790DD2B5D101E00470069 /* FriendListTableViewCell.swift */,
 				E75790DE2B5D101E00470069 /* FriendListTableViewCell.xib */,
 			);
@@ -254,7 +261,6 @@
 				E72697982B5A4D3E006A0034 /* Cells */,
 				E772B4A22B5A3787000BF51C /* Base */,
 				E772B48D2B58F59B000BF51C /* UserInfoView.swift */,
-				E772B49A2B5A2283000BF51C /* SelectionTabView.swift */,
 				E734BEF62B5C26890038F9A7 /* DefaultEmptyFriendView.xib */,
 				E75790D12B5C55C700470069 /* DefaultEmptyFriendView.swift */,
 			);
@@ -276,6 +282,7 @@
 				E772B49E2B5A3091000BF51C /* BadgeLabel.swift */,
 				E734BEE52B5B65500038F9A7 /* KKTabBarController.swift */,
 				E734BEF42B5B6F7B0038F9A7 /* KKFriendNavigationController.swift */,
+				E772B49A2B5A2283000BF51C /* SelectionTabView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -365,6 +372,7 @@
 				E734BEEA2B5B68AB0038F9A7 /* Friends.storyboard in Resources */,
 				E772B48B2B58EBDB000BF51C /* friend1.json in Resources */,
 				E75790D42B5CF98600470069 /* Home.storyboard in Resources */,
+				E72697972B5A4B01006A0034 /* FriendRequestTableViewCell.xib in Resources */,
 				E734BEE82B5B687D0038F9A7 /* Products.storyboard in Resources */,
 				E772B4862B58E982000BF51C /* man.json in Resources */,
 				E772B4552B58CF1D000BF51C /* LaunchScreen.storyboard in Resources */,
@@ -410,6 +418,7 @@
 				E772B46A2B58D9A8000BF51C /* KKFriend.swift in Sources */,
 				E772B4492B58CF1B000BF51C /* AppDelegate.swift in Sources */,
 				E772B48E2B58F59B000BF51C /* UserInfoView.swift in Sources */,
+				E726979A2B5A4D69006A0034 /* FriendRequestTableViewCell.swift in Sources */,
 				E772B4812B58E5C8000BF51C /* KokoFriendListViewModel.swift in Sources */,
 				E75790DF2B5D101E00470069 /* FriendListTableViewCell.swift in Sources */,
 				E772B4902B594512000BF51C /* UIFont+EXT.swift in Sources */,
