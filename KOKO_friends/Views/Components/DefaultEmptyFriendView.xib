@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DefaultEmptyFriendView" customModule="KOKO_friends" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="hax-2n-hk1" id="mYW-ey-qbV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="hax-2n-hk1" userLabel="contentView">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgFriendsEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="x82-i8-TSz">
+                    <rect key="frame" x="74" y="89" width="245" height="172"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="就從加好友開始吧：）" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0D-FI-lZl">
+                    <rect key="frame" x="91.666666666666686" y="302" width="210" height="29.666666666666686"/>
+                    <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="21"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="與好友們一起用 KOKO 聊起來！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNi-rF-Xg6">
+                    <rect key="frame" x="94.333333333333329" y="339.66666666666669" width="204.33333333333337" height="19.666666666666686"/>
+                    <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="還能互相收付款、發紅包喔：）" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eT-iZ-1rK">
+                    <rect key="frame" x="98.666666666666686" y="367" width="196" height="19.666666666666686"/>
+                    <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fh-0C-ZCQ">
+                    <rect key="frame" x="100.66666666666669" y="411.66666666666669" width="192" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="192" id="RHa-tp-YjO"/>
+                        <constraint firstAttribute="height" constant="40" id="Zh7-9p-408"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="icAddFriendWhite" imagePlacement="trailing" title="加好友" imagePadding="16" titleAlignment="center">
+                        <backgroundConfiguration key="background" cornerRadius="20">
+                            <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        </backgroundConfiguration>
+                        <fontDescription key="titleFontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="16"/>
+                        <directionalEdgeInsets key="contentInsets" top="0.0" leading="48" bottom="0.0" trailing="48"/>
+                        <color key="baseForegroundColor" red="0.92549019610000005" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </buttonConfiguration>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eUC-py-Bwt">
+                    <rect key="frame" x="89" y="488.66666666666669" width="215" height="18.333333333333314"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="幫助好友更快找到你？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0o-YB-EV8">
+                            <rect key="frame" x="0.0" y="0.0" width="130" height="18.333333333333332"/>
+                            <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="13"/>
+                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHR-Ku-1vW">
+                            <rect key="frame" x="130" y="0.0" width="85" height="18.333333333333332"/>
+                            <attributedString key="attributedText">
+                                <fragment content="設定 KOKO ID">
+                                    <attributes>
+                                        <color key="NSColor" name="AccentColor"/>
+                                        <font key="NSFont" size="13" name="PingFangTC-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        <integer key="NSUnderline" value="1"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="5o3-KT-Xc9"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="5fh-0C-ZCQ" firstAttribute="centerX" secondItem="5o3-KT-Xc9" secondAttribute="centerX" id="052-Xq-Lwv"/>
+                <constraint firstItem="x82-i8-TSz" firstAttribute="centerX" secondItem="5o3-KT-Xc9" secondAttribute="centerX" id="2E7-CT-E7P"/>
+                <constraint firstItem="eUC-py-Bwt" firstAttribute="top" secondItem="5fh-0C-ZCQ" secondAttribute="bottom" constant="37" id="2L4-EB-E9y"/>
+                <constraint firstItem="3eT-iZ-1rK" firstAttribute="top" secondItem="wNi-rF-Xg6" secondAttribute="bottom" constant="7.6666666666666288" id="F2D-jf-VJS"/>
+                <constraint firstItem="5fh-0C-ZCQ" firstAttribute="top" secondItem="3eT-iZ-1rK" secondAttribute="bottom" constant="25" id="JKF-Xz-63Y"/>
+                <constraint firstItem="eUC-py-Bwt" firstAttribute="centerX" secondItem="5o3-KT-Xc9" secondAttribute="centerX" id="NSe-9P-0Gf"/>
+                <constraint firstItem="x82-i8-TSz" firstAttribute="top" secondItem="5o3-KT-Xc9" secondAttribute="top" constant="30" id="NwF-aO-qJC"/>
+                <constraint firstItem="wNi-rF-Xg6" firstAttribute="centerX" secondItem="5o3-KT-Xc9" secondAttribute="centerX" id="Vtk-Md-AbH"/>
+                <constraint firstItem="3eT-iZ-1rK" firstAttribute="centerX" secondItem="5o3-KT-Xc9" secondAttribute="centerX" id="cqd-Fn-7qb"/>
+                <constraint firstItem="wNi-rF-Xg6" firstAttribute="top" secondItem="c0D-FI-lZl" secondAttribute="bottom" constant="8" id="gbl-yr-qTn"/>
+                <constraint firstItem="c0D-FI-lZl" firstAttribute="centerX" secondItem="5o3-KT-Xc9" secondAttribute="centerX" id="wK0-8H-jyL"/>
+                <constraint firstItem="c0D-FI-lZl" firstAttribute="top" secondItem="x82-i8-TSz" secondAttribute="bottom" constant="41" id="x2r-yA-oIN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-364.12213740458014" y="4.9295774647887329"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icAddFriendWhite" width="24" height="24"/>
+        <image name="imgFriendsEmpty" width="245" height="172"/>
+        <namedColor name="AccentColor">
+            <color red="0.92549019607843142" green="0.0" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

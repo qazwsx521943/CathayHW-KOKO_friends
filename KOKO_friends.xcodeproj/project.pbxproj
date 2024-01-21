@@ -16,6 +16,8 @@
 		E734BEF02B5B690E0038F9A7 /* UIStoryboard+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734BEEF2B5B690E0038F9A7 /* UIStoryboard+EXT.swift */; };
 		E734BEF22B5B6D350038F9A7 /* UIColor+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734BEF12B5B6D350038F9A7 /* UIColor+EXT.swift */; };
 		E734BEF52B5B6F7B0038F9A7 /* KKFriendNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734BEF42B5B6F7B0038F9A7 /* KKFriendNavigationController.swift */; };
+		E734BEF72B5C26890038F9A7 /* DefaultEmptyFriendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E734BEF62B5C26890038F9A7 /* DefaultEmptyFriendView.xib */; };
+		E75790D22B5C55C700470069 /* DefaultEmptyFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75790D12B5C55C700470069 /* DefaultEmptyFriendView.swift */; };
 		E772B4492B58CF1B000BF51C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4482B58CF1B000BF51C /* AppDelegate.swift */; };
 		E772B44B2B58CF1B000BF51C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B44A2B58CF1B000BF51C /* SceneDelegate.swift */; };
 		E772B44D2B58CF1B000BF51C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B44C2B58CF1B000BF51C /* ViewController.swift */; };
@@ -62,6 +64,8 @@
 		E734BEEF2B5B690E0038F9A7 /* UIStoryboard+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+EXT.swift"; sourceTree = "<group>"; };
 		E734BEF12B5B6D350038F9A7 /* UIColor+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+EXT.swift"; sourceTree = "<group>"; };
 		E734BEF42B5B6F7B0038F9A7 /* KKFriendNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKFriendNavigationController.swift; sourceTree = "<group>"; };
+		E734BEF62B5C26890038F9A7 /* DefaultEmptyFriendView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultEmptyFriendView.xib; sourceTree = "<group>"; };
+		E75790D12B5C55C700470069 /* DefaultEmptyFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultEmptyFriendView.swift; sourceTree = "<group>"; };
 		E772B4452B58CF1B000BF51C /* KOKO_friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KOKO_friends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E772B4482B58CF1B000BF51C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E772B44A2B58CF1B000BF51C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -234,6 +238,8 @@
 				E772B4A22B5A3787000BF51C /* Base */,
 				E772B48D2B58F59B000BF51C /* UserInfoView.swift */,
 				E772B49A2B5A2283000BF51C /* SelectionTabView.swift */,
+				E734BEF62B5C26890038F9A7 /* DefaultEmptyFriendView.xib */,
+				E75790D12B5C55C700470069 /* DefaultEmptyFriendView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -338,6 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E734BEF72B5C26890038F9A7 /* DefaultEmptyFriendView.xib in Resources */,
 				E734BEEA2B5B68AB0038F9A7 /* Friends.storyboard in Resources */,
 				E772B48B2B58EBDB000BF51C /* friend1.json in Resources */,
 				E734BEE82B5B687D0038F9A7 /* Products.storyboard in Resources */,
@@ -370,6 +377,7 @@
 				E772B44D2B58CF1B000BF51C /* ViewController.swift in Sources */,
 				E734BEF02B5B690E0038F9A7 /* UIStoryboard+EXT.swift in Sources */,
 				E772B4602B58D34D000BF51C /* KokoService.swift in Sources */,
+				E75790D22B5C55C700470069 /* DefaultEmptyFriendView.swift in Sources */,
 				E726979C2B5A4F5B006A0034 /* UITableView+EXT.swift in Sources */,
 				E772B4842B58E8EA000BF51C /* MockKokoService.swift in Sources */,
 				E772B46C2B58DAED000BF51C /* KKUser.swift in Sources */,
