@@ -43,7 +43,16 @@ class KokoFriendListViewModel {
 			.store(in: &anyCancellables)
 	}
 
-	public func fetchFriends(type: Int) {
+	public func loadFriendList() {
+		switch friendResponseType {
+		case .noFriends, .withPendingInvitations:
+			fetchFriends(type: friendResponseType.endPoints[0])
+		case .noPendingInvitations:
+			fetchFriendsParallel()
+		}
+	}
+
+	private func fetchFriends(type: Int) {
 		kokoService.getUserFriends(type: type)
 			.receive(on: RunLoop.main)
 			.sink { completion in
@@ -58,6 +67,26 @@ class KokoFriendListViewModel {
 				self.pendingInvitation = friends.filter { $0.status == .pending }
 			}
 			.store(in: &anyCancellables)
+	}
+
+	private func fetchFriendsParallel() {
+		let combinedPublishers = Publishers.CombineLatest(kokoService.getUserFriends(type: 1), kokoService.getUserFriends(type: 2))
+			.map { value1, value2 in
+				let combinedData = value1 + value2
+				let uniqueData = Dictionary(grouping: combinedData, by: { $0.fid })
+					.map { $0.value.max(by: { $0.updateDate < $1.updateDate }) }
+					.compactMap { $0 }
+				return uniqueData
+			}
+			.eraseToAnyPublisher()
+
+		combinedPublishers.sink { completion in
+
+		} receiveValue: { friends in
+			self.friendList = friends.filter { $0.status != .pending }
+			self.pendingInvitation = friends.filter { $0.status == .pending }
+		}
+		.store(in: &anyCancellables)
 	}
 
 	public func searchFriend(keyword: String) {

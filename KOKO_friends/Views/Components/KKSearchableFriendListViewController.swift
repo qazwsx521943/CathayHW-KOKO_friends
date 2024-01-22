@@ -63,9 +63,7 @@ class KKSearchableFriendListViewController: UIViewController {
 
 	@objc fileprivate func loadData() {
 		refreshControl.beginRefreshing()
-		viewModel.friendResponseType.endPoints.forEach { type in
-			viewModel.fetchFriends(type: type)
-		}
+		viewModel.loadFriendList()
 	}
 
 	private func setupViewController() {

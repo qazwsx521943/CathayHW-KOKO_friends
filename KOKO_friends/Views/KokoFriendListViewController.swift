@@ -30,6 +30,7 @@ class KokoFriendListViewController: UIViewController {
 		tableView.translatesAutoresizingMaskIntoConstraints = false
 		tableView.delegate = self
 		tableView.dataSource = self
+		tableView.isScrollEnabled = false
 		tableView.kk_registerCellWithNib(identifier: FriendRequestTableViewCell.identifier, bundle: nil)
 		return tableView
 	}()
@@ -74,8 +75,7 @@ class KokoFriendListViewController: UIViewController {
 		setupView()
 		setupBindings()
 		kokoFriendListViewModel.fetchUser()
-		kokoFriendListViewModel.fetchFriends(type: 1)
-		friendRequestTableViewHeightConstraint = friendRequestTableView.heightAnchor.constraint(equalToConstant: 100)
+		kokoFriendListViewModel.loadFriendList()
 	}
 
 	@objc fileprivate func requestTypeChanged(sender: UISegmentedControl) {
@@ -110,12 +110,11 @@ class KokoFriendListViewController: UIViewController {
 			userInfoView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
 			userInfoView.heightAnchor.constraint(equalToConstant: 60),
 
-			friendRequestTableView.topAnchor.constraint(equalTo: userInfoView.bottomAnchor),
+			friendRequestTableView.topAnchor.constraint(equalTo: userInfoView.bottomAnchor, constant: 28),
 			friendRequestTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
 			friendRequestTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-//			friendRequestTableView.heightAnchor.constraint(equalToConstant: 100),
 
-			selectionTab.topAnchor.constraint(equalTo: friendRequestTableView.bottomAnchor, constant: 28),
+			selectionTab.topAnchor.constraint(equalTo: friendRequestTableView.bottomAnchor),
 			selectionTab.heightAnchor.constraint(equalToConstant: 30),
 			selectionTab.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
 			selectionTab.widthAnchor.constraint(equalToConstant: 150),
@@ -130,6 +129,9 @@ class KokoFriendListViewController: UIViewController {
 			containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
 			containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
 		])
+
+		friendRequestTableViewHeightConstraint = friendRequestTableView.heightAnchor.constraint(equalToConstant: 80)
+		friendRequestTableViewHeightConstraint.isActive = true
 	}
 
 	private func setupBindings() {
@@ -141,10 +143,7 @@ class KokoFriendListViewController: UIViewController {
 		kokoFriendListViewModel.$friendResponseType
 			.receive(on: RunLoop.main)
 			.sink { [weak self] type in
-				type.endPoints.forEach { endPoint in
-					self?.kokoFriendListViewModel.fetchFriends(type: endPoint)
-				}
-
+				self?.kokoFriendListViewModel.loadFriendList()
 			}
 			.store(in: &bindings)
 
@@ -168,7 +167,7 @@ class KokoFriendListViewController: UIViewController {
 		kokoFriendListViewModel.$pendingInvitation
 			.receive(on: RunLoop.main)
 			.sink { [weak self] invitations in
-				self?.toggleFriendRequestConstraint(height: invitations.count == 0 ? 0 : 100)
+				self?.toggleFriendRequestConstraint(height: invitations.count == 0 ? 0 : 80)
 				self?.friendRequestTableView.reloadData()
 			}
 			.store(in: &bindings)
