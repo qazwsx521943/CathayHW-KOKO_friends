@@ -23,7 +23,7 @@ class BadgeLabelView: UIView {
 	private let badgeLabel: BadgeLabel = {
 		let label = BadgeLabel()
 		label.translatesAutoresizingMaskIntoConstraints = false
-		label.backgroundColor = .accent
+		label.backgroundColor = .softPink
 		return label
 	}()
 
@@ -62,6 +62,10 @@ class BadgeLabelView: UIView {
 	}
 
 	public func updateBadgeValue(_ value: Int) {
+		if value == 0 {
+			self.badgeLabel.text = nil
+			return
+		}
 		self.badgeLabel.text = "\(value)\(value >= 99 ? "+" : "")"
 	}
 }
