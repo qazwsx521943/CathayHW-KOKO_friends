@@ -22,7 +22,7 @@ class SelectionTabView: UIView {
 		view.translatesAutoresizingMaskIntoConstraints = false
 		view.axis = .horizontal
 		view.alignment = .center
-		view.distribution = .fill
+		view.distribution = .fillEqually
 		view.spacing = 0
 		return view
 	}()
@@ -76,8 +76,6 @@ class SelectionTabView: UIView {
 			if let badgeValue = delegate?.selectionTabView(self, badgeValueForTabAt: IndexPath(row: i, section: 0)) {
 				tabLabel.updateBadgeValue(badgeValue)
 			}
-			tabLabel.widthAnchor.constraint(equalToConstant: 50).isActive = true
-			tabLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
 
 			tabLabel.buttonTapped = { [weak self] in
 				self?.indicatorViewConstraint.isActive = false
@@ -90,9 +88,9 @@ class SelectionTabView: UIView {
 			}
 
 			stackView.addArrangedSubview(tabLabel)
-			indicatorViewConstraint = indicatorView.centerXAnchor.constraint(equalTo: stackView.subviews[0].centerXAnchor)
 		}
-		
+		indicatorViewConstraint = indicatorView.centerXAnchor.constraint(equalTo: stackView.subviews[0].centerXAnchor)
+
 		NSLayoutConstraint.activate([
 			indicatorView.widthAnchor.constraint(equalToConstant: 20),
 			indicatorView.heightAnchor.constraint(equalToConstant: 4),

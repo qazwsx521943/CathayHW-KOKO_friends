@@ -16,6 +16,7 @@ class BadgeLabelView: UIView {
 		button.titleLabel?.textAlignment = .center
 		button.titleLabel?.font = .getKKFont(.textStyle)
 		button.setTitleColor(.black, for: .normal)
+		button.setContentHuggingPriority(.defaultHigh, for: .horizontal)
 		return button
 	}()
 
