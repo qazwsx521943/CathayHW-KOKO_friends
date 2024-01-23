@@ -80,7 +80,7 @@ class KokoFriendListViewModel {
 					print("error: \(error.localizedDescription)")
 				}
 			} receiveValue: { friends in
-				self.friendList = friends.filter { $0.status != .pending }
+				self.friendList = friends.filter { $0.status != .pending }.sorted(by: { $0.fid > $1.fid })
 				self.pendingInvitation = friends.filter { $0.status == .pending }
 			}
 			.store(in: &anyCancellables)
@@ -101,7 +101,7 @@ class KokoFriendListViewModel {
 		combinedPublishers.sink { completion in
 
 		} receiveValue: { friends in
-			self.friendList = friends.filter { $0.status != .pending }
+			self.friendList = friends.filter { $0.status != .pending }.sorted(by: { $0.fid > $1.fid })
 			self.pendingInvitation = friends.filter { $0.status == .pending }
 		}
 		.store(in: &anyCancellables)

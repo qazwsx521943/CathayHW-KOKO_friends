@@ -57,6 +57,7 @@ class KokoFriendListViewController: UIViewController {
 		view.translatesAutoresizingMaskIntoConstraints = false
 		return view
 	}()
+	private var containerViewTopConstraint: NSLayoutConstraint!
 
 	lazy var defaultEmptyView: UIViewController = {
 		self.makeEmptyFriendListVC()
@@ -65,6 +66,7 @@ class KokoFriendListViewController: UIViewController {
 	lazy var friendListVC: KKSearchableFriendListViewController = {
 		let vc = KKSearchableFriendListViewController(viewModel: kokoFriendListViewModel)
 		vc.view.translatesAutoresizingMaskIntoConstraints = false
+		vc.delegate = self
 		return vc
 	}()
 
@@ -119,14 +121,16 @@ class KokoFriendListViewController: UIViewController {
 			divider.leadingAnchor.constraint(equalTo: view.leadingAnchor),
 			divider.trailingAnchor.constraint(equalTo: view.trailingAnchor),
 
-			containerView.topAnchor.constraint(equalTo: selectionTab.bottomAnchor),
-			containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-			containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+			containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+			containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
 			containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
 		])
 
 		friendRequestTableViewHeightConstraint = friendRequestTableView.heightAnchor.constraint(equalToConstant: 85)
 		friendRequestTableViewHeightConstraint.isActive = true
+
+		containerViewTopConstraint = containerView.topAnchor.constraint(equalTo: selectionTab.bottomAnchor)
+		containerViewTopConstraint.isActive = true
 	}
 
 	private func setupBindings() {
@@ -162,8 +166,13 @@ class KokoFriendListViewController: UIViewController {
 		kokoFriendListViewModel.$pendingInvitation
 			.receive(on: RunLoop.main)
 			.sink { [weak self] invitations in
-				self?.toggleFriendRequestConstraint(height: invitations.count == 0 ? 0 : 85)
-				self?.friendRequestTableView.reloadData()
+				guard let self else { return }
+				if self.isFriendRequestTableViewExpanded {
+					self.expandFriendRequestTableView(cellCount: invitations.count)
+				} else {
+					toggleFriendRequestConstraint(height: invitations.count == 0 ? 0 : 85)
+				}
+				self.friendRequestTableView.reloadData()
 			}
 			.store(in: &bindings)
 	}
@@ -205,6 +214,18 @@ class KokoFriendListViewController: UIViewController {
 	private func expandFriendRequestTableView(cellCount: Int) {
 		toggleFriendRequestConstraint(height: CGFloat(cellCount * 85))
 		friendRequestTableView.reloadData()
+	}
+
+	private func pushContainerViewToTop() {
+		containerViewTopConstraint.isActive = false
+		containerViewTopConstraint = containerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
+		containerViewTopConstraint.isActive = true
+	}
+
+	private func resetContainerViewConstraint() {
+		containerViewTopConstraint.isActive = false
+		containerViewTopConstraint = containerView.topAnchor.constraint(equalTo: selectionTab.bottomAnchor)
+		containerViewTopConstraint.isActive = true
 	}
 }
 
@@ -269,3 +290,14 @@ extension KokoFriendListViewController: SelectionTabViewDelegate {
 		}
 	}
 }
+
+extension KokoFriendListViewController: KKSearchableFriendListViewControllerDelegate {
+	func beginEditing(_ viewController: KKSearchableFriendListViewController) {
+		pushContainerViewToTop()
+	}
+
+	func endEditing(_ viewController: KKSearchableFriendListViewController) {
+	 resetContainerViewConstraint()
+	}
+}
+

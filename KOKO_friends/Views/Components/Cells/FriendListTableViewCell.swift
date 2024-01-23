@@ -54,6 +54,7 @@ class FriendListTableViewCell: UITableViewCell {
 
 	override func awakeFromNib() {
         super.awakeFromNib()
+		selectionStyle = .none
     }
 
 	public func configure(friend: KKFriend) {
