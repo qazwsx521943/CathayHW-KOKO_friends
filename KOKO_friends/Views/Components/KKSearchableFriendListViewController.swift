@@ -9,6 +9,12 @@ import UIKit
 import SwiftUI
 import Combine
 
+protocol KKSearchableFriendListViewControllerDelegate: AnyObject {
+	func beginEditing(_ viewController: KKSearchableFriendListViewController)
+
+	func endEditing(_ viewController: KKSearchableFriendListViewController)
+}
+
 class KKSearchableFriendListViewController: UIViewController {
 
 	lazy var searchBar: UISearchBar = {
@@ -46,6 +52,8 @@ class KKSearchableFriendListViewController: UIViewController {
 	private var viewModel: KokoFriendListViewModel
 	private var bindings = Set<AnyCancellable>()
 
+	weak var delegate: KKSearchableFriendListViewControllerDelegate?
+
 	required init?(coder: NSCoder) {
 		fatalError("this will never be called")
 	}
@@ -59,6 +67,7 @@ class KKSearchableFriendListViewController: UIViewController {
         super.viewDidLoad()
 		setupViewController()
 		setupBindings()
+		view.backgroundColor = .white
     }
 
 	@objc fileprivate func loadData() {
@@ -73,16 +82,16 @@ class KKSearchableFriendListViewController: UIViewController {
 
 		NSLayoutConstraint.activate([
 			searchBar.topAnchor.constraint(equalTo: view.topAnchor),
-			searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+			searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
 			searchBar.trailingAnchor.constraint(equalTo: addFriendButton.leadingAnchor, constant: -15),
 
 			addFriendButton.centerYAnchor.constraint(equalTo: searchBar.centerYAnchor),
-			addFriendButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+			addFriendButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -15),
 			addFriendButton.widthAnchor.constraint(equalToConstant: 24),
 
 			tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 10),
-			tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-			tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+			tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+			tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
 			tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
 		])
 	}
@@ -103,8 +112,18 @@ class KKSearchableFriendListViewController: UIViewController {
 	}
 }
 
-extension KKSearchableFriendListViewController: UITableViewDelegate {
+extension KKSearchableFriendListViewController {
+	func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+		searchBar.searchTextField.resignFirstResponder()
 
+		delegate?.endEditing(self)
+	}
+}
+
+extension KKSearchableFriendListViewController: UITableViewDelegate {
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		60
+	}
 }
 
 extension KKSearchableFriendListViewController: UITableViewDataSource {
@@ -125,6 +144,11 @@ extension KKSearchableFriendListViewController: UITableViewDataSource {
 extension KKSearchableFriendListViewController: UISearchBarDelegate {
 	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 		viewModel.searchFriend(keyword: searchText)
+	}
+
+	func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+		delegate?.beginEditing(self)
+		return true
 	}
 }
 
