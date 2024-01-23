@@ -31,10 +31,12 @@ class KokoFriendListViewController: UIViewController {
 		tableView.delegate = self
 		tableView.dataSource = self
 		tableView.isScrollEnabled = false
+		tableView.separatorStyle = .none
 		tableView.kk_registerCellWithNib(identifier: FriendRequestTableViewCell.identifier, bundle: nil)
 		return tableView
 	}()
 	private var friendRequestTableViewHeightConstraint: NSLayoutConstraint!
+	private var isFriendRequestTableViewExpanded: Bool = false
 
 	lazy var selectionTab: SelectionTabView = {
 		let view = SelectionTabView()
@@ -82,13 +84,6 @@ class KokoFriendListViewController: UIViewController {
 		kokoFriendListViewModel.friendResponseType = APIRequest(rawValue: sender.selectedSegmentIndex) ?? .noFriends
 	}
 
-	private func toggleFriendRequestConstraint(height: CGFloat) {
-		friendRequestTableViewHeightConstraint.isActive = false
-		friendRequestTableViewHeightConstraint = friendRequestTableView.heightAnchor.constraint(equalToConstant: height)
-
-		friendRequestTableViewHeightConstraint.isActive = true
-	}
-
 	// MARK: - Private func
 	private func setupView() {
 		view.addSubview(requestTypeSegmentControl)
@@ -114,7 +109,7 @@ class KokoFriendListViewController: UIViewController {
 			friendRequestTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
 			friendRequestTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
 
-			selectionTab.topAnchor.constraint(equalTo: friendRequestTableView.bottomAnchor),
+			selectionTab.topAnchor.constraint(equalTo: friendRequestTableView.bottomAnchor, constant: 15),
 			selectionTab.heightAnchor.constraint(equalToConstant: 30),
 			selectionTab.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
 			selectionTab.widthAnchor.constraint(equalToConstant: 150),
@@ -130,7 +125,7 @@ class KokoFriendListViewController: UIViewController {
 			containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
 		])
 
-		friendRequestTableViewHeightConstraint = friendRequestTableView.heightAnchor.constraint(equalToConstant: 80)
+		friendRequestTableViewHeightConstraint = friendRequestTableView.heightAnchor.constraint(equalToConstant: 85)
 		friendRequestTableViewHeightConstraint.isActive = true
 	}
 
@@ -167,7 +162,7 @@ class KokoFriendListViewController: UIViewController {
 		kokoFriendListViewModel.$pendingInvitation
 			.receive(on: RunLoop.main)
 			.sink { [weak self] invitations in
-				self?.toggleFriendRequestConstraint(height: invitations.count == 0 ? 0 : 80)
+				self?.toggleFriendRequestConstraint(height: invitations.count == 0 ? 0 : 85)
 				self?.friendRequestTableView.reloadData()
 			}
 			.store(in: &bindings)
@@ -200,11 +195,31 @@ class KokoFriendListViewController: UIViewController {
 	private func removeEmptyListView() {
 		defaultEmptyView.remove()
 	}
+
+	private func toggleFriendRequestConstraint(height: CGFloat) {
+		friendRequestTableViewHeightConstraint.isActive = false
+		friendRequestTableViewHeightConstraint = friendRequestTableView.heightAnchor.constraint(equalToConstant: height)
+		friendRequestTableViewHeightConstraint.isActive = true
+	}
+
+	private func expandFriendRequestTableView(cellCount: Int) {
+		toggleFriendRequestConstraint(height: CGFloat(cellCount * 85))
+		friendRequestTableView.reloadData()
+	}
 }
 
 extension KokoFriendListViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		70
+		80
+	}
+
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let rowCount = kokoFriendListViewModel.pendingInvitation.count
+		if indexPath.row == 0, rowCount > 1 {
+			expandFriendRequestTableView(cellCount: isFriendRequestTableViewExpanded ? 1 : rowCount)
+
+			isFriendRequestTableViewExpanded.toggle()
+		}
 	}
 }
 
@@ -218,6 +233,7 @@ extension KokoFriendListViewController: UITableViewDataSource {
 			return UITableViewCell()
 		}
 		let friend = kokoFriendListViewModel.pendingInvitation[indexPath.row]
+		let invitationCount = kokoFriendListViewModel.pendingInvitation.count
 
 		cell.acceptButtonClosure = { [weak self] in
 			self?.kokoFriendListViewModel.acceptFriendRequest(from: friend)
@@ -227,7 +243,8 @@ extension KokoFriendListViewController: UITableViewDataSource {
 			self?.kokoFriendListViewModel.rejectFriendRequest(from: friend)
 		}
 
-		cell.configure(friend: friend)
+		cell.configure(friend: friend, isExpand: isFriendRequestTableViewExpanded || invitationCount == 1)
+
 		return cell
 	}
 }
