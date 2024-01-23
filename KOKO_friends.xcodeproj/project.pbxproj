@@ -50,6 +50,7 @@
 		E772B49D2B5A2A45000BF51C /* BadgeLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B49C2B5A2A45000BF51C /* BadgeLabelView.swift */; };
 		E772B49F2B5A3091000BF51C /* BadgeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B49E2B5A3091000BF51C /* BadgeLabel.swift */; };
 		E772B4A12B5A3493000BF51C /* UIView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4A02B5A3493000BF51C /* UIView+EXT.swift */; };
+		E7E135332B5F5C9D00357D73 /* CAGradientLayer+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E135322B5F5C9D00357D73 /* CAGradientLayer+EXT.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		E772B49C2B5A2A45000BF51C /* BadgeLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeLabelView.swift; sourceTree = "<group>"; };
 		E772B49E2B5A3091000BF51C /* BadgeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeLabel.swift; sourceTree = "<group>"; };
 		E772B4A02B5A3493000BF51C /* UIView+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+EXT.swift"; sourceTree = "<group>"; };
+		E7E135322B5F5C9D00357D73 /* CAGradientLayer+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+EXT.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 				E734BEEF2B5B690E0038F9A7 /* UIStoryboard+EXT.swift */,
 				E734BEF12B5B6D350038F9A7 /* UIColor+EXT.swift */,
 				E75790CF2B5C528E00470069 /* UIViewController+EXT.swift */,
+				E7E135322B5F5C9D00357D73 /* CAGradientLayer+EXT.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				E726979A2B5A4D69006A0034 /* FriendRequestTableViewCell.swift in Sources */,
 				E772B4812B58E5C8000BF51C /* KokoFriendListViewModel.swift in Sources */,
 				E75790DF2B5D101E00470069 /* FriendListTableViewCell.swift in Sources */,
+				E7E135332B5F5C9D00357D73 /* CAGradientLayer+EXT.swift in Sources */,
 				E772B4902B594512000BF51C /* UIFont+EXT.swift in Sources */,
 				E772B44B2B58CF1B000BF51C /* SceneDelegate.swift in Sources */,
 				E734BEF22B5B6D350038F9A7 /* UIColor+EXT.swift in Sources */,

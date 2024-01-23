@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DefaultEmptyFriendView" customModule="KOKO_friends" customModuleProvider="target">
             <connections>
+                <outlet property="addFriendButton" destination="5fh-0C-ZCQ" id="W3N-SU-lIj"/>
                 <outlet property="contentView" destination="hax-2n-hk1" id="mYW-ey-qbV"/>
             </connections>
         </placeholder>
@@ -39,17 +40,15 @@
                     <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fh-0C-ZCQ">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fh-0C-ZCQ">
                     <rect key="frame" x="100.66666666666669" y="411.66666666666669" width="192" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="192" id="RHa-tp-YjO"/>
                         <constraint firstAttribute="height" constant="40" id="Zh7-9p-408"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" image="icAddFriendWhite" imagePlacement="trailing" title="加好友" imagePadding="16" titleAlignment="center">
-                        <backgroundConfiguration key="background" cornerRadius="20">
-                            <color key="backgroundColor" systemColor="systemGreenColor"/>
-                        </backgroundConfiguration>
+                    <buttonConfiguration key="configuration" style="plain" title="加好友" titleAlignment="center">
+                        <backgroundConfiguration key="background" cornerRadius="20"/>
                         <fontDescription key="titleFontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="16"/>
                         <directionalEdgeInsets key="contentInsets" top="0.0" leading="48" bottom="0.0" trailing="48"/>
                         <color key="baseForegroundColor" red="0.92549019610000005" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -80,6 +79,13 @@
                         </label>
                     </subviews>
                 </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icAddFriendWhite" highlightedImage="icAddFriendWhite" translatesAutoresizingMaskIntoConstraints="NO" id="qTP-xI-ny2">
+                    <rect key="frame" x="260.66666666666669" y="419.66666666666669" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="6Yn-ss-jqK"/>
+                        <constraint firstAttribute="width" constant="24" id="kew-hz-sNM"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="5o3-KT-Xc9"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -89,9 +95,11 @@
                 <constraint firstItem="eUC-py-Bwt" firstAttribute="top" secondItem="5fh-0C-ZCQ" secondAttribute="bottom" constant="37" id="2L4-EB-E9y"/>
                 <constraint firstItem="3eT-iZ-1rK" firstAttribute="top" secondItem="wNi-rF-Xg6" secondAttribute="bottom" constant="7.6666666666666288" id="F2D-jf-VJS"/>
                 <constraint firstItem="5fh-0C-ZCQ" firstAttribute="top" secondItem="3eT-iZ-1rK" secondAttribute="bottom" constant="25" id="JKF-Xz-63Y"/>
+                <constraint firstItem="qTP-xI-ny2" firstAttribute="trailing" secondItem="5fh-0C-ZCQ" secondAttribute="trailing" constant="-8" id="MGA-aD-vcq"/>
                 <constraint firstItem="eUC-py-Bwt" firstAttribute="centerX" secondItem="5o3-KT-Xc9" secondAttribute="centerX" id="NSe-9P-0Gf"/>
                 <constraint firstItem="x82-i8-TSz" firstAttribute="top" secondItem="5o3-KT-Xc9" secondAttribute="top" constant="30" id="NwF-aO-qJC"/>
                 <constraint firstItem="wNi-rF-Xg6" firstAttribute="centerX" secondItem="5o3-KT-Xc9" secondAttribute="centerX" id="Vtk-Md-AbH"/>
+                <constraint firstItem="qTP-xI-ny2" firstAttribute="centerY" secondItem="5fh-0C-ZCQ" secondAttribute="centerY" id="W3s-jc-N5D"/>
                 <constraint firstItem="3eT-iZ-1rK" firstAttribute="centerX" secondItem="5o3-KT-Xc9" secondAttribute="centerX" id="cqd-Fn-7qb"/>
                 <constraint firstItem="wNi-rF-Xg6" firstAttribute="top" secondItem="c0D-FI-lZl" secondAttribute="bottom" constant="8" id="gbl-yr-qTn"/>
                 <constraint firstItem="c0D-FI-lZl" firstAttribute="centerX" secondItem="5o3-KT-Xc9" secondAttribute="centerX" id="wK0-8H-jyL"/>
@@ -109,9 +117,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
