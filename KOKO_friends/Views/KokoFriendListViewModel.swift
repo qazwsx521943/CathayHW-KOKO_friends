@@ -52,6 +52,23 @@ class KokoFriendListViewModel {
 		}
 	}
 
+	public func searchFriend(keyword: String) {
+		searchedList = friendList.filter { $0.name.contains(keyword) }
+	}
+
+	public func acceptFriendRequest(from friend: KKFriend) {
+		if let idx = pendingInvitation.firstIndex(of: friend) {
+			let acceptedFriend = pendingInvitation.remove(at: idx)
+			friendList.append(acceptedFriend)
+		}
+	}
+
+	public func rejectFriendRequest(from friend: KKFriend) {
+		if let idx = pendingInvitation.firstIndex(of: friend) {
+			pendingInvitation.remove(at: idx)
+		}
+	}
+
 	private func fetchFriends(type: Int) {
 		kokoService.getUserFriends(type: type)
 			.receive(on: RunLoop.main)
@@ -74,8 +91,9 @@ class KokoFriendListViewModel {
 			.map { value1, value2 in
 				let combinedData = value1 + value2
 				let uniqueData = Dictionary(grouping: combinedData, by: { $0.fid })
-					.map { $0.value.max(by: { $0.updateDate < $1.updateDate }) }
+					.map { $0.value.max(by: { $0.updateDate > $1.updateDate }) }
 					.compactMap { $0 }
+
 				return uniqueData
 			}
 			.eraseToAnyPublisher()
@@ -87,22 +105,5 @@ class KokoFriendListViewModel {
 			self.pendingInvitation = friends.filter { $0.status == .pending }
 		}
 		.store(in: &anyCancellables)
-	}
-
-	public func searchFriend(keyword: String) {
-		searchedList = friendList.filter { $0.name.contains(keyword) }
-	}
-
-	public func acceptFriendRequest(from friend: KKFriend) {
-		if let idx = pendingInvitation.firstIndex(of: friend) {
-			let acceptedFriend = pendingInvitation.remove(at: idx)
-			friendList.append(acceptedFriend)
-		}
-	}
-
-	public func rejectFriendRequest(from friend: KKFriend) {
-		if let idx = pendingInvitation.firstIndex(of: friend) {
-			pendingInvitation.remove(at: idx)
-		}
 	}
 }
