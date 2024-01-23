@@ -14,7 +14,9 @@ struct KKFriend: Codable, Equatable {
 	let isTop: String
 	let fid: String
 	let updateDate: Date
+}
 
+extension KKFriend {
 	func encode(to encoder: Encoder) throws {
 		var container = encoder.container(keyedBy: CodingKeys.self)
 		try container.encode(self.name, forKey: .name)

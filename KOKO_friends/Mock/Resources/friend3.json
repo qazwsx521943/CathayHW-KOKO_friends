@@ -8,6 +8,13 @@
 			"updateDate": "20190801"
 		},
 		{
+			"name": "黃色閃光",
+			"status": 1,
+			"isTop": "0",
+			"fid": "999",
+			"updateDate": "20190801"
+		},
+		{
 			"name": "翁勳儀",
 			"status": 0,
 			"isTop": "1",
@@ -34,7 +41,20 @@
 			"isTop": "0",
 			"fid": "008",
 			"updateDate": "20190803"
+		},
+		{
+			"name": "賀華",
+			"status": 0,
+			"isTop": "0",
+			"fid": "009",
+			"updateDate": "20190803"
+		},
+		{
+			"name": "小傑",
+			"status": 0,
+			"isTop": "0",
+			"fid": "010",
+			"updateDate": "20190803"
 		}
-
 	]
 }

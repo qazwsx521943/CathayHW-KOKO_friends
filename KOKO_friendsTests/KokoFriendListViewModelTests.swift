@@ -49,4 +49,45 @@ final class KokoFriendListViewModelTests: XCTestCase {
 		XCTAssertNil(viewModel.currentUser)
 		cancellable.cancel()
 	}
+
+	func test_fetchFriendsParallel_count() {
+		let expectation = XCTestExpectation(description: "fetchFriends with 2 request")
+
+		let mockService = MockKokoService()
+		let viewModel = KokoFriendListViewModel(kokoService: mockService)
+		viewModel.friendResponseType = .noPendingInvitations
+		viewModel.loadFriendList()
+
+		let cancellable = viewModel.$friendList
+			.dropFirst(1)
+			.sink { friends in
+				expectation.fulfill()
+			}
+
+		wait(for: [expectation], timeout: 5.0)
+		XCTAssertEqual(viewModel.friendList.count, 6)
+		XCTAssertEqual(viewModel.pendingInvitation.count, 0)
+		cancellable.cancel()
+	}
+
+	func test_searchFriendByKeyword_count() {
+		let expectation = XCTestExpectation(description: "filter friendlist fulfilled")
+		let mockService = MockKokoService()
+		let viewModel = KokoFriendListViewModel(kokoService: mockService)
+
+		viewModel.friendResponseType = .withPendingInvitations
+		viewModel.friendList = [
+			KKFriend(name: "黃色閃光", status: .friend, isTop: "1", fid: "001", updateDate: Date())
+		]
+		viewModel.searchFriend(keyword: "黃")
+
+		let Cancellable = viewModel.$searchedList
+			.sink { _ in
+				expectation.fulfill()
+			}
+
+		wait(for: [expectation], timeout: 1.0)
+		XCTAssertEqual(viewModel.searchedList.count, 1)
+		Cancellable.cancel()
+	}
 }
