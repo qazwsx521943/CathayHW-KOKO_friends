@@ -7,23 +7,118 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E72697972B5A4B01006A0034 /* FriendRequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72697962B5A4B01006A0034 /* FriendRequestTableViewCell.xib */; };
+		E726979A2B5A4D69006A0034 /* FriendRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72697992B5A4D69006A0034 /* FriendRequestTableViewCell.swift */; };
+		E726979C2B5A4F5B006A0034 /* UITableView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E726979B2B5A4F5B006A0034 /* UITableView+EXT.swift */; };
+		E734BEE62B5B65500038F9A7 /* KKTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734BEE52B5B65500038F9A7 /* KKTabBarController.swift */; };
+		E734BEE82B5B687D0038F9A7 /* Products.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E734BEE72B5B687D0038F9A7 /* Products.storyboard */; };
+		E734BEEA2B5B68AB0038F9A7 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E734BEE92B5B68AB0038F9A7 /* Friends.storyboard */; };
+		E734BEEC2B5B68E00038F9A7 /* Manage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E734BEEB2B5B68E00038F9A7 /* Manage.storyboard */; };
+		E734BEEE2B5B68E90038F9A7 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E734BEED2B5B68E90038F9A7 /* Setting.storyboard */; };
+		E734BEF02B5B690E0038F9A7 /* UIStoryboard+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734BEEF2B5B690E0038F9A7 /* UIStoryboard+EXT.swift */; };
+		E734BEF22B5B6D350038F9A7 /* UIColor+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734BEF12B5B6D350038F9A7 /* UIColor+EXT.swift */; };
+		E734BEF52B5B6F7B0038F9A7 /* KKFriendNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734BEF42B5B6F7B0038F9A7 /* KKFriendNavigationController.swift */; };
+		E734BEF72B5C26890038F9A7 /* DefaultEmptyFriendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E734BEF62B5C26890038F9A7 /* DefaultEmptyFriendView.xib */; };
+		E75790D02B5C528E00470069 /* UIViewController+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75790CF2B5C528E00470069 /* UIViewController+EXT.swift */; };
+		E75790D22B5C55C700470069 /* DefaultEmptyFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75790D12B5C55C700470069 /* DefaultEmptyFriendView.swift */; };
+		E75790D42B5CF98600470069 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E75790D32B5CF98600470069 /* Home.storyboard */; };
+		E75790DF2B5D101E00470069 /* FriendListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75790DD2B5D101E00470069 /* FriendListTableViewCell.swift */; };
+		E75790E02B5D101E00470069 /* FriendListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E75790DE2B5D101E00470069 /* FriendListTableViewCell.xib */; };
+		E75790E62B5D76E200470069 /* KKSearchableFriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75790E52B5D76E200470069 /* KKSearchableFriendListViewController.swift */; };
 		E772B4492B58CF1B000BF51C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4482B58CF1B000BF51C /* AppDelegate.swift */; };
 		E772B44B2B58CF1B000BF51C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B44A2B58CF1B000BF51C /* SceneDelegate.swift */; };
-		E772B44D2B58CF1B000BF51C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B44C2B58CF1B000BF51C /* ViewController.swift */; };
+		E772B44D2B58CF1B000BF51C /* KokoFriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B44C2B58CF1B000BF51C /* KokoFriendListViewController.swift */; };
 		E772B4502B58CF1B000BF51C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E772B44E2B58CF1B000BF51C /* Main.storyboard */; };
 		E772B4522B58CF1D000BF51C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E772B4512B58CF1D000BF51C /* Assets.xcassets */; };
 		E772B4552B58CF1D000BF51C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E772B4532B58CF1D000BF51C /* LaunchScreen.storyboard */; };
+		E772B4602B58D34D000BF51C /* KokoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B45F2B58D34D000BF51C /* KokoService.swift */; };
+		E772B4662B58D4A7000BF51C /* Bundle+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4652B58D4A7000BF51C /* Bundle+EXT.swift */; };
+		E772B46A2B58D9A8000BF51C /* KKFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4692B58D9A8000BF51C /* KKFriend.swift */; };
+		E772B46C2B58DAED000BF51C /* KKUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B46B2B58DAED000BF51C /* KKUser.swift */; };
+		E772B46F2B58DC22000BF51C /* KKResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B46E2B58DC22000BF51C /* KKResponse.swift */; };
+		E772B4712B58E0BC000BF51C /* KKRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4702B58E0BC000BF51C /* KKRequest.swift */; };
+		E772B4792B58E3FE000BF51C /* KokoFriendListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4782B58E3FE000BF51C /* KokoFriendListViewModelTests.swift */; };
+		E772B4812B58E5C8000BF51C /* KokoFriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4802B58E5C8000BF51C /* KokoFriendListViewModel.swift */; };
+		E772B4842B58E8EA000BF51C /* MockKokoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4832B58E8EA000BF51C /* MockKokoService.swift */; };
+		E772B4862B58E982000BF51C /* man.json in Resources */ = {isa = PBXBuildFile; fileRef = E772B4852B58E982000BF51C /* man.json */; };
+		E772B4892B58E9C7000BF51C /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4882B58E9C7000BF51C /* FileLoader.swift */; };
+		E772B48B2B58EBDB000BF51C /* friend1.json in Resources */ = {isa = PBXBuildFile; fileRef = E772B48A2B58EBDB000BF51C /* friend1.json */; };
+		E772B48E2B58F59B000BF51C /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B48D2B58F59B000BF51C /* UserInfoView.swift */; };
+		E772B4902B594512000BF51C /* UIFont+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B48F2B594512000BF51C /* UIFont+EXT.swift */; };
+		E772B4952B594AEF000BF51C /* KKFontStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4942B594AEF000BF51C /* KKFontStyles.swift */; };
+		E772B49B2B5A2283000BF51C /* SelectionTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B49A2B5A2283000BF51C /* SelectionTabView.swift */; };
+		E772B49D2B5A2A45000BF51C /* BadgeLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B49C2B5A2A45000BF51C /* BadgeLabelView.swift */; };
+		E772B49F2B5A3091000BF51C /* BadgeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B49E2B5A3091000BF51C /* BadgeLabel.swift */; };
+		E772B4A12B5A3493000BF51C /* UIView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4A02B5A3493000BF51C /* UIView+EXT.swift */; };
+		E7E135332B5F5C9D00357D73 /* CAGradientLayer+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E135322B5F5C9D00357D73 /* CAGradientLayer+EXT.swift */; };
+		E7E135362B5F7EAE00357D73 /* friend2.json in Resources */ = {isa = PBXBuildFile; fileRef = E7E135352B5F7EAE00357D73 /* friend2.json */; };
+		E7E135382B5F7ED400357D73 /* friend3.json in Resources */ = {isa = PBXBuildFile; fileRef = E7E135372B5F7ED400357D73 /* friend3.json */; };
+		E7E1353A2B5F7F1B00357D73 /* friend4.json in Resources */ = {isa = PBXBuildFile; fileRef = E7E135392B5F7F1B00357D73 /* friend4.json */; };
+		E7E1353C2B5F85B000357D73 /* DateFormatter+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E1353B2B5F85B000357D73 /* DateFormatter+EXT.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E772B47A2B58E3FE000BF51C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E772B43D2B58CF1B000BF51C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E772B4442B58CF1B000BF51C;
+			remoteInfo = KOKO_friends;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		E72697962B5A4B01006A0034 /* FriendRequestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendRequestTableViewCell.xib; sourceTree = "<group>"; };
+		E72697992B5A4D69006A0034 /* FriendRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestTableViewCell.swift; sourceTree = "<group>"; };
+		E726979B2B5A4F5B006A0034 /* UITableView+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EXT.swift"; sourceTree = "<group>"; };
+		E734BEE52B5B65500038F9A7 /* KKTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKTabBarController.swift; sourceTree = "<group>"; };
+		E734BEE72B5B687D0038F9A7 /* Products.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Products.storyboard; sourceTree = "<group>"; };
+		E734BEE92B5B68AB0038F9A7 /* Friends.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
+		E734BEEB2B5B68E00038F9A7 /* Manage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Manage.storyboard; sourceTree = "<group>"; };
+		E734BEED2B5B68E90038F9A7 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		E734BEEF2B5B690E0038F9A7 /* UIStoryboard+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+EXT.swift"; sourceTree = "<group>"; };
+		E734BEF12B5B6D350038F9A7 /* UIColor+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+EXT.swift"; sourceTree = "<group>"; };
+		E734BEF42B5B6F7B0038F9A7 /* KKFriendNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKFriendNavigationController.swift; sourceTree = "<group>"; };
+		E734BEF62B5C26890038F9A7 /* DefaultEmptyFriendView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultEmptyFriendView.xib; sourceTree = "<group>"; };
+		E75790CF2B5C528E00470069 /* UIViewController+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+EXT.swift"; sourceTree = "<group>"; };
+		E75790D12B5C55C700470069 /* DefaultEmptyFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultEmptyFriendView.swift; sourceTree = "<group>"; };
+		E75790D32B5CF98600470069 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		E75790DD2B5D101E00470069 /* FriendListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListTableViewCell.swift; sourceTree = "<group>"; };
+		E75790DE2B5D101E00470069 /* FriendListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendListTableViewCell.xib; sourceTree = "<group>"; };
+		E75790E52B5D76E200470069 /* KKSearchableFriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKSearchableFriendListViewController.swift; sourceTree = "<group>"; };
 		E772B4452B58CF1B000BF51C /* KOKO_friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KOKO_friends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E772B4482B58CF1B000BF51C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E772B44A2B58CF1B000BF51C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E772B44C2B58CF1B000BF51C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E772B44C2B58CF1B000BF51C /* KokoFriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KokoFriendListViewController.swift; sourceTree = "<group>"; };
 		E772B44F2B58CF1B000BF51C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E772B4512B58CF1D000BF51C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E772B4542B58CF1D000BF51C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E772B4562B58CF1D000BF51C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E772B45F2B58D34D000BF51C /* KokoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KokoService.swift; sourceTree = "<group>"; };
+		E772B4652B58D4A7000BF51C /* Bundle+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+EXT.swift"; sourceTree = "<group>"; };
+		E772B4692B58D9A8000BF51C /* KKFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKFriend.swift; sourceTree = "<group>"; };
+		E772B46B2B58DAED000BF51C /* KKUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKUser.swift; sourceTree = "<group>"; };
+		E772B46E2B58DC22000BF51C /* KKResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKResponse.swift; sourceTree = "<group>"; };
+		E772B4702B58E0BC000BF51C /* KKRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKRequest.swift; sourceTree = "<group>"; };
+		E772B4762B58E3FE000BF51C /* KOKO_friendsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KOKO_friendsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E772B4782B58E3FE000BF51C /* KokoFriendListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KokoFriendListViewModelTests.swift; sourceTree = "<group>"; };
+		E772B4802B58E5C8000BF51C /* KokoFriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KokoFriendListViewModel.swift; sourceTree = "<group>"; };
+		E772B4832B58E8EA000BF51C /* MockKokoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockKokoService.swift; sourceTree = "<group>"; };
+		E772B4852B58E982000BF51C /* man.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = man.json; sourceTree = "<group>"; };
+		E772B4882B58E9C7000BF51C /* FileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLoader.swift; sourceTree = "<group>"; };
+		E772B48A2B58EBDB000BF51C /* friend1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = friend1.json; sourceTree = "<group>"; };
+		E772B48D2B58F59B000BF51C /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		E772B48F2B594512000BF51C /* UIFont+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+EXT.swift"; sourceTree = "<group>"; };
+		E772B4942B594AEF000BF51C /* KKFontStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKFontStyles.swift; sourceTree = "<group>"; };
+		E772B49A2B5A2283000BF51C /* SelectionTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTabView.swift; sourceTree = "<group>"; };
+		E772B49C2B5A2A45000BF51C /* BadgeLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeLabelView.swift; sourceTree = "<group>"; };
+		E772B49E2B5A3091000BF51C /* BadgeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeLabel.swift; sourceTree = "<group>"; };
+		E772B4A02B5A3493000BF51C /* UIView+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+EXT.swift"; sourceTree = "<group>"; };
+		E7E135322B5F5C9D00357D73 /* CAGradientLayer+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+EXT.swift"; sourceTree = "<group>"; };
+		E7E135352B5F7EAE00357D73 /* friend2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = friend2.json; sourceTree = "<group>"; };
+		E7E135372B5F7ED400357D73 /* friend3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = friend3.json; sourceTree = "<group>"; };
+		E7E135392B5F7F1B00357D73 /* friend4.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = friend4.json; sourceTree = "<group>"; };
+		E7E1353B2B5F85B000357D73 /* DateFormatter+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+EXT.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,13 +129,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E772B4732B58E3FE000BF51C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E72697982B5A4D3E006A0034 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E72697992B5A4D69006A0034 /* FriendRequestTableViewCell.swift */,
+				E72697962B5A4B01006A0034 /* FriendRequestTableViewCell.xib */,
+				E75790DD2B5D101E00470069 /* FriendListTableViewCell.swift */,
+				E75790DE2B5D101E00470069 /* FriendListTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		E772B43C2B58CF1B000BF51C = {
 			isa = PBXGroup;
 			children = (
 				E772B4472B58CF1B000BF51C /* KOKO_friends */,
+				E772B4772B58E3FE000BF51C /* KOKO_friendsTests */,
 				E772B4462B58CF1B000BF51C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				E772B4452B58CF1B000BF51C /* KOKO_friends.app */,
+				E772B4762B58E3FE000BF51C /* KOKO_friendsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +171,149 @@
 		E772B4472B58CF1B000BF51C /* KOKO_friends */ = {
 			isa = PBXGroup;
 			children = (
-				E772B4482B58CF1B000BF51C /* AppDelegate.swift */,
-				E772B44A2B58CF1B000BF51C /* SceneDelegate.swift */,
-				E772B44C2B58CF1B000BF51C /* ViewController.swift */,
-				E772B44E2B58CF1B000BF51C /* Main.storyboard */,
+				E7E1353D2B5FAB7900357D73 /* System */,
+				E772B4912B594ACB000BF51C /* Styles */,
+				E772B4872B58E9B2000BF51C /* Helpers */,
+				E772B4822B58E8D8000BF51C /* Mock */,
+				E772B4642B58D499000BF51C /* Extensions */,
+				E772B4612B58D3C5000BF51C /* Models */,
+				E772B45C2B58D2F9000BF51C /* Services */,
+				E772B47F2B58E59A000BF51C /* Views */,
 				E772B4512B58CF1D000BF51C /* Assets.xcassets */,
 				E772B4532B58CF1D000BF51C /* LaunchScreen.storyboard */,
 				E772B4562B58CF1D000BF51C /* Info.plist */,
 			);
 			path = KOKO_friends;
+			sourceTree = "<group>";
+		};
+		E772B45C2B58D2F9000BF51C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E772B45F2B58D34D000BF51C /* KokoService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E772B4612B58D3C5000BF51C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E772B4692B58D9A8000BF51C /* KKFriend.swift */,
+				E772B46B2B58DAED000BF51C /* KKUser.swift */,
+				E772B46E2B58DC22000BF51C /* KKResponse.swift */,
+				E772B4702B58E0BC000BF51C /* KKRequest.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E772B4642B58D499000BF51C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E772B4652B58D4A7000BF51C /* Bundle+EXT.swift */,
+				E772B48F2B594512000BF51C /* UIFont+EXT.swift */,
+				E772B4A02B5A3493000BF51C /* UIView+EXT.swift */,
+				E726979B2B5A4F5B006A0034 /* UITableView+EXT.swift */,
+				E734BEEF2B5B690E0038F9A7 /* UIStoryboard+EXT.swift */,
+				E734BEF12B5B6D350038F9A7 /* UIColor+EXT.swift */,
+				E75790CF2B5C528E00470069 /* UIViewController+EXT.swift */,
+				E7E135322B5F5C9D00357D73 /* CAGradientLayer+EXT.swift */,
+				E7E1353B2B5F85B000357D73 /* DateFormatter+EXT.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E772B4772B58E3FE000BF51C /* KOKO_friendsTests */ = {
+			isa = PBXGroup;
+			children = (
+				E772B4782B58E3FE000BF51C /* KokoFriendListViewModelTests.swift */,
+			);
+			path = KOKO_friendsTests;
+			sourceTree = "<group>";
+		};
+		E772B47F2B58E59A000BF51C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E772B48C2B58F57A000BF51C /* Components */,
+				E772B4802B58E5C8000BF51C /* KokoFriendListViewModel.swift */,
+				E772B44C2B58CF1B000BF51C /* KokoFriendListViewController.swift */,
+				E772B44E2B58CF1B000BF51C /* Main.storyboard */,
+				E734BEE72B5B687D0038F9A7 /* Products.storyboard */,
+				E734BEEB2B5B68E00038F9A7 /* Manage.storyboard */,
+				E734BEED2B5B68E90038F9A7 /* Setting.storyboard */,
+				E734BEE92B5B68AB0038F9A7 /* Friends.storyboard */,
+				E75790D32B5CF98600470069 /* Home.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E772B4822B58E8D8000BF51C /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				E7E135342B5F7E9100357D73 /* Resources */,
+				E772B4832B58E8EA000BF51C /* MockKokoService.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		E772B4872B58E9B2000BF51C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E772B4882B58E9C7000BF51C /* FileLoader.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E772B48C2B58F57A000BF51C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E72697982B5A4D3E006A0034 /* Cells */,
+				E772B4A22B5A3787000BF51C /* Base */,
+				E772B48D2B58F59B000BF51C /* UserInfoView.swift */,
+				E734BEF62B5C26890038F9A7 /* DefaultEmptyFriendView.xib */,
+				E75790D12B5C55C700470069 /* DefaultEmptyFriendView.swift */,
+				E75790E52B5D76E200470069 /* KKSearchableFriendListViewController.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E772B4912B594ACB000BF51C /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				E772B4942B594AEF000BF51C /* KKFontStyles.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		E772B4A22B5A3787000BF51C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E772B49C2B5A2A45000BF51C /* BadgeLabelView.swift */,
+				E772B49E2B5A3091000BF51C /* BadgeLabel.swift */,
+				E734BEE52B5B65500038F9A7 /* KKTabBarController.swift */,
+				E734BEF42B5B6F7B0038F9A7 /* KKFriendNavigationController.swift */,
+				E772B49A2B5A2283000BF51C /* SelectionTabView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E7E135342B5F7E9100357D73 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E772B4852B58E982000BF51C /* man.json */,
+				E772B48A2B58EBDB000BF51C /* friend1.json */,
+				E7E135352B5F7EAE00357D73 /* friend2.json */,
+				E7E135372B5F7ED400357D73 /* friend3.json */,
+				E7E135392B5F7F1B00357D73 /* friend4.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E7E1353D2B5FAB7900357D73 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				E772B4482B58CF1B000BF51C /* AppDelegate.swift */,
+				E772B44A2B58CF1B000BF51C /* SceneDelegate.swift */,
+			);
+			path = System;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +336,24 @@
 			productReference = E772B4452B58CF1B000BF51C /* KOKO_friends.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E772B4752B58E3FE000BF51C /* KOKO_friendsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E772B47C2B58E3FE000BF51C /* Build configuration list for PBXNativeTarget "KOKO_friendsTests" */;
+			buildPhases = (
+				E772B4722B58E3FE000BF51C /* Sources */,
+				E772B4732B58E3FE000BF51C /* Frameworks */,
+				E772B4742B58E3FE000BF51C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E772B47B2B58E3FE000BF51C /* PBXTargetDependency */,
+			);
+			name = KOKO_friendsTests;
+			productName = KOKO_friendsTests;
+			productReference = E772B4762B58E3FE000BF51C /* KOKO_friendsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +366,10 @@
 				TargetAttributes = {
 					E772B4442B58CF1B000BF51C = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					E772B4752B58E3FE000BF51C = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = E772B4442B58CF1B000BF51C;
 					};
 				};
 			};
@@ -116,6 +387,7 @@
 			projectRoot = "";
 			targets = (
 				E772B4442B58CF1B000BF51C /* KOKO_friends */,
+				E772B4752B58E3FE000BF51C /* KOKO_friendsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -125,9 +397,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7E1353A2B5F7F1B00357D73 /* friend4.json in Resources */,
+				E734BEF72B5C26890038F9A7 /* DefaultEmptyFriendView.xib in Resources */,
+				E734BEEA2B5B68AB0038F9A7 /* Friends.storyboard in Resources */,
+				E772B48B2B58EBDB000BF51C /* friend1.json in Resources */,
+				E75790D42B5CF98600470069 /* Home.storyboard in Resources */,
+				E7E135362B5F7EAE00357D73 /* friend2.json in Resources */,
+				E72697972B5A4B01006A0034 /* FriendRequestTableViewCell.xib in Resources */,
+				E734BEE82B5B687D0038F9A7 /* Products.storyboard in Resources */,
+				E772B4862B58E982000BF51C /* man.json in Resources */,
 				E772B4552B58CF1D000BF51C /* LaunchScreen.storyboard in Resources */,
 				E772B4522B58CF1D000BF51C /* Assets.xcassets in Resources */,
+				E734BEEE2B5B68E90038F9A7 /* Setting.storyboard in Resources */,
 				E772B4502B58CF1B000BF51C /* Main.storyboard in Resources */,
+				E75790E02B5D101E00470069 /* FriendListTableViewCell.xib in Resources */,
+				E734BEEC2B5B68E00038F9A7 /* Manage.storyboard in Resources */,
+				E7E135382B5F7ED400357D73 /* friend3.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E772B4742B58E3FE000BF51C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,13 +430,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E772B44D2B58CF1B000BF51C /* ViewController.swift in Sources */,
+				E7E1353C2B5F85B000357D73 /* DateFormatter+EXT.swift in Sources */,
+				E772B49D2B5A2A45000BF51C /* BadgeLabelView.swift in Sources */,
+				E772B4712B58E0BC000BF51C /* KKRequest.swift in Sources */,
+				E772B46F2B58DC22000BF51C /* KKResponse.swift in Sources */,
+				E772B44D2B58CF1B000BF51C /* KokoFriendListViewController.swift in Sources */,
+				E734BEF02B5B690E0038F9A7 /* UIStoryboard+EXT.swift in Sources */,
+				E772B4602B58D34D000BF51C /* KokoService.swift in Sources */,
+				E75790E62B5D76E200470069 /* KKSearchableFriendListViewController.swift in Sources */,
+				E75790D22B5C55C700470069 /* DefaultEmptyFriendView.swift in Sources */,
+				E726979C2B5A4F5B006A0034 /* UITableView+EXT.swift in Sources */,
+				E772B4842B58E8EA000BF51C /* MockKokoService.swift in Sources */,
+				E772B46C2B58DAED000BF51C /* KKUser.swift in Sources */,
+				E772B4892B58E9C7000BF51C /* FileLoader.swift in Sources */,
+				E772B4A12B5A3493000BF51C /* UIView+EXT.swift in Sources */,
+				E734BEE62B5B65500038F9A7 /* KKTabBarController.swift in Sources */,
+				E772B4662B58D4A7000BF51C /* Bundle+EXT.swift in Sources */,
+				E772B49B2B5A2283000BF51C /* SelectionTabView.swift in Sources */,
+				E772B4952B594AEF000BF51C /* KKFontStyles.swift in Sources */,
+				E75790D02B5C528E00470069 /* UIViewController+EXT.swift in Sources */,
+				E734BEF52B5B6F7B0038F9A7 /* KKFriendNavigationController.swift in Sources */,
+				E772B46A2B58D9A8000BF51C /* KKFriend.swift in Sources */,
 				E772B4492B58CF1B000BF51C /* AppDelegate.swift in Sources */,
+				E772B48E2B58F59B000BF51C /* UserInfoView.swift in Sources */,
+				E726979A2B5A4D69006A0034 /* FriendRequestTableViewCell.swift in Sources */,
+				E772B4812B58E5C8000BF51C /* KokoFriendListViewModel.swift in Sources */,
+				E75790DF2B5D101E00470069 /* FriendListTableViewCell.swift in Sources */,
+				E7E135332B5F5C9D00357D73 /* CAGradientLayer+EXT.swift in Sources */,
+				E772B4902B594512000BF51C /* UIFont+EXT.swift in Sources */,
 				E772B44B2B58CF1B000BF51C /* SceneDelegate.swift in Sources */,
+				E734BEF22B5B6D350038F9A7 /* UIColor+EXT.swift in Sources */,
+				E772B49F2B5A3091000BF51C /* BadgeLabel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E772B4722B58E3FE000BF51C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E772B4792B58E3FE000BF51C /* KokoFriendListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E772B47B2B58E3FE000BF51C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E772B4442B58CF1B000BF51C /* KOKO_friends */;
+			targetProxy = E772B47A2B58E3FE000BF51C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E772B44E2B58CF1B000BF51C /* Main.storyboard */ = {
@@ -341,6 +677,42 @@
 			};
 			name = Release;
 		};
+		E772B47D2B58E3FE000BF51C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y73ZJF4SCP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ios22-jason.KOKO-friendsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KOKO_friends.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KOKO_friends";
+			};
+			name = Debug;
+		};
+		E772B47E2B58E3FE000BF51C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y73ZJF4SCP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ios22-jason.KOKO-friendsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KOKO_friends.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KOKO_friends";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -358,6 +730,15 @@
 			buildConfigurations = (
 				E772B45A2B58CF1D000BF51C /* Debug */,
 				E772B45B2B58CF1D000BF51C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E772B47C2B58E3FE000BF51C /* Build configuration list for PBXNativeTarget "KOKO_friendsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E772B47D2B58E3FE000BF51C /* Debug */,
+				E772B47E2B58E3FE000BF51C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
