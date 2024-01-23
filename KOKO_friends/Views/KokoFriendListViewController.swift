@@ -162,8 +162,13 @@ class KokoFriendListViewController: UIViewController {
 		kokoFriendListViewModel.$pendingInvitation
 			.receive(on: RunLoop.main)
 			.sink { [weak self] invitations in
-				self?.toggleFriendRequestConstraint(height: invitations.count == 0 ? 0 : 85)
-				self?.friendRequestTableView.reloadData()
+				guard let self else { return }
+				if self.isFriendRequestTableViewExpanded {
+					self.expandFriendRequestTableView(cellCount: invitations.count)
+				} else {
+					toggleFriendRequestConstraint(height: invitations.count == 0 ? 0 : 85)
+				}
+				self.friendRequestTableView.reloadData()
 			}
 			.store(in: &bindings)
 	}
