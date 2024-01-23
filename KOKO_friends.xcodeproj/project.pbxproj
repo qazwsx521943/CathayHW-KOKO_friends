@@ -51,6 +51,9 @@
 		E772B49F2B5A3091000BF51C /* BadgeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B49E2B5A3091000BF51C /* BadgeLabel.swift */; };
 		E772B4A12B5A3493000BF51C /* UIView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4A02B5A3493000BF51C /* UIView+EXT.swift */; };
 		E7E135332B5F5C9D00357D73 /* CAGradientLayer+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E135322B5F5C9D00357D73 /* CAGradientLayer+EXT.swift */; };
+		E7E135362B5F7EAE00357D73 /* friend2.json in Resources */ = {isa = PBXBuildFile; fileRef = E7E135352B5F7EAE00357D73 /* friend2.json */; };
+		E7E135382B5F7ED400357D73 /* friend3.json in Resources */ = {isa = PBXBuildFile; fileRef = E7E135372B5F7ED400357D73 /* friend3.json */; };
+		E7E1353A2B5F7F1B00357D73 /* friend4.json in Resources */ = {isa = PBXBuildFile; fileRef = E7E135392B5F7F1B00357D73 /* friend4.json */; };
 		E7E1353C2B5F85B000357D73 /* DateFormatter+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E1353B2B5F85B000357D73 /* DateFormatter+EXT.swift */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +115,9 @@
 		E772B49E2B5A3091000BF51C /* BadgeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeLabel.swift; sourceTree = "<group>"; };
 		E772B4A02B5A3493000BF51C /* UIView+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+EXT.swift"; sourceTree = "<group>"; };
 		E7E135322B5F5C9D00357D73 /* CAGradientLayer+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+EXT.swift"; sourceTree = "<group>"; };
+		E7E135352B5F7EAE00357D73 /* friend2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = friend2.json; sourceTree = "<group>"; };
+		E7E135372B5F7ED400357D73 /* friend3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = friend3.json; sourceTree = "<group>"; };
+		E7E135392B5F7F1B00357D73 /* friend4.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = friend4.json; sourceTree = "<group>"; };
 		E7E1353B2B5F85B000357D73 /* DateFormatter+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+EXT.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -251,9 +257,8 @@
 		E772B4822B58E8D8000BF51C /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				E7E135342B5F7E9100357D73 /* Resources */,
 				E772B4832B58E8EA000BF51C /* MockKokoService.swift */,
-				E772B4852B58E982000BF51C /* man.json */,
-				E772B48A2B58EBDB000BF51C /* friend1.json */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -297,6 +302,18 @@
 				E772B49A2B5A2283000BF51C /* SelectionTabView.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		E7E135342B5F7E9100357D73 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E772B4852B58E982000BF51C /* man.json */,
+				E772B48A2B58EBDB000BF51C /* friend1.json */,
+				E7E135352B5F7EAE00357D73 /* friend2.json */,
+				E7E135372B5F7ED400357D73 /* friend3.json */,
+				E7E135392B5F7F1B00357D73 /* friend4.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,10 +397,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7E1353A2B5F7F1B00357D73 /* friend4.json in Resources */,
 				E734BEF72B5C26890038F9A7 /* DefaultEmptyFriendView.xib in Resources */,
 				E734BEEA2B5B68AB0038F9A7 /* Friends.storyboard in Resources */,
 				E772B48B2B58EBDB000BF51C /* friend1.json in Resources */,
 				E75790D42B5CF98600470069 /* Home.storyboard in Resources */,
+				E7E135362B5F7EAE00357D73 /* friend2.json in Resources */,
 				E72697972B5A4B01006A0034 /* FriendRequestTableViewCell.xib in Resources */,
 				E734BEE82B5B687D0038F9A7 /* Products.storyboard in Resources */,
 				E772B4862B58E982000BF51C /* man.json in Resources */,
@@ -393,6 +412,7 @@
 				E772B4502B58CF1B000BF51C /* Main.storyboard in Resources */,
 				E75790E02B5D101E00470069 /* FriendListTableViewCell.xib in Resources */,
 				E734BEEC2B5B68E00038F9A7 /* Manage.storyboard in Resources */,
+				E7E135382B5F7ED400357D73 /* friend3.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
