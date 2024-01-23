@@ -171,16 +171,14 @@
 		E772B4472B58CF1B000BF51C /* KOKO_friends */ = {
 			isa = PBXGroup;
 			children = (
+				E7E1353D2B5FAB7900357D73 /* System */,
 				E772B4912B594ACB000BF51C /* Styles */,
 				E772B4872B58E9B2000BF51C /* Helpers */,
 				E772B4822B58E8D8000BF51C /* Mock */,
-				E772B47F2B58E59A000BF51C /* Views */,
-				E772B46D2B58DB73000BF51C /* Managers */,
 				E772B4642B58D499000BF51C /* Extensions */,
 				E772B4612B58D3C5000BF51C /* Models */,
 				E772B45C2B58D2F9000BF51C /* Services */,
-				E772B4482B58CF1B000BF51C /* AppDelegate.swift */,
-				E772B44A2B58CF1B000BF51C /* SceneDelegate.swift */,
+				E772B47F2B58E59A000BF51C /* Views */,
 				E772B4512B58CF1D000BF51C /* Assets.xcassets */,
 				E772B4532B58CF1D000BF51C /* LaunchScreen.storyboard */,
 				E772B4562B58CF1D000BF51C /* Info.plist */,
@@ -221,13 +219,6 @@
 				E7E1353B2B5F85B000357D73 /* DateFormatter+EXT.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		E772B46D2B58DB73000BF51C /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		E772B4772B58E3FE000BF51C /* KOKO_friendsTests */ = {
@@ -314,6 +305,15 @@
 				E7E135392B5F7F1B00357D73 /* friend4.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E7E1353D2B5FAB7900357D73 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				E772B4482B58CF1B000BF51C /* AppDelegate.swift */,
+				E772B44A2B58CF1B000BF51C /* SceneDelegate.swift */,
+			);
+			path = System;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
