@@ -51,6 +51,7 @@
 		E772B49F2B5A3091000BF51C /* BadgeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B49E2B5A3091000BF51C /* BadgeLabel.swift */; };
 		E772B4A12B5A3493000BF51C /* UIView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772B4A02B5A3493000BF51C /* UIView+EXT.swift */; };
 		E7E135332B5F5C9D00357D73 /* CAGradientLayer+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E135322B5F5C9D00357D73 /* CAGradientLayer+EXT.swift */; };
+		E7E1353C2B5F85B000357D73 /* DateFormatter+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E1353B2B5F85B000357D73 /* DateFormatter+EXT.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		E772B49E2B5A3091000BF51C /* BadgeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeLabel.swift; sourceTree = "<group>"; };
 		E772B4A02B5A3493000BF51C /* UIView+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+EXT.swift"; sourceTree = "<group>"; };
 		E7E135322B5F5C9D00357D73 /* CAGradientLayer+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+EXT.swift"; sourceTree = "<group>"; };
+		E7E1353B2B5F85B000357D73 /* DateFormatter+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+EXT.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 				E734BEF12B5B6D350038F9A7 /* UIColor+EXT.swift */,
 				E75790CF2B5C528E00470069 /* UIViewController+EXT.swift */,
 				E7E135322B5F5C9D00357D73 /* CAGradientLayer+EXT.swift */,
+				E7E1353B2B5F85B000357D73 /* DateFormatter+EXT.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7E1353C2B5F85B000357D73 /* DateFormatter+EXT.swift in Sources */,
 				E772B49D2B5A2A45000BF51C /* BadgeLabelView.swift in Sources */,
 				E772B4712B58E0BC000BF51C /* KKRequest.swift in Sources */,
 				E772B46F2B58DC22000BF51C /* KKResponse.swift in Sources */,

@@ -91,7 +91,7 @@ class KokoFriendListViewModel {
 			.map { value1, value2 in
 				let combinedData = value1 + value2
 				let uniqueData = Dictionary(grouping: combinedData, by: { $0.fid })
-					.map { $0.value.max(by: { $0.updateDate > $1.updateDate }) }
+					.map { $0.value.max(by: { $0.updateDate < $1.updateDate }) }
 					.compactMap { $0 }
 
 				return uniqueData
